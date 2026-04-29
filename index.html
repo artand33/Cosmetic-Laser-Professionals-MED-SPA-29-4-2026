@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cosmetic Laser Professionals — Miami's premier med spa. Laser hair removal, Botox, fillers, body sculpting, and more. Medical director on staff. Since 2014." />
+  <title>CLP Med Spa — Miami's Premier Medical Aesthetic Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       PROMO BANNER
+  ═══════════════════════════════════════════════ -->
+  <div id="promo-banner" role="banner">
+    <p>
+      <span data-en="✦ 20% off your first laser session — mention this offer when booking" data-es="✦ 20% de descuento en tu primera sesión láser — menciona esta oferta al reservar">✦ 20% off your first laser session — mention this offer when booking</span>
+    </p>
+    <button id="promo-close" aria-label="Dismiss offer">×</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════════════ -->
+  <header id="site-header">
+    <nav class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="CLP Med Spa home">
+        <span class="logo-clp">CLP</span>
+        <span class="logo-subtitle">Med Spa</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#treatments" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a></li>
+        <li><a href="#team" data-en="Team" data-es="Equipo">Team</a></li>
+        <li><a href="#location" data-en="Location" data-es="Ubicación">Location</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch to Spanish">ES</button>
+        <a href="tel:3054561170" class="btn btn-ghost btn-sm" data-en="Call" data-es="Llamar">Call</a>
+        <a href="#booking" class="btn btn-primary btn-sm" data-en="Book Now" data-es="Reservar">Book Now</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#treatments" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a></li>
+        <li><a href="#team" data-en="Team" data-es="Equipo">Team</a></li>
+        <li><a href="#location" data-en="Location" data-es="Ubicación">Location</a></li>
+        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-ctas">
+        <a href="tel:3054561170" class="btn btn-ghost" data-en="Call 305-456-1170" data-es="Llamar 305-456-1170">Call 305-456-1170</a>
+        <a href="#booking" class="btn btn-primary" data-en="Book Your Visit" data-es="Reservar Cita">Book Your Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-proof-hint">
+          <span class="stars" aria-label="5 stars">★★★★★</span>
+          <span data-en="4.9 · 500+ Reviews · Since 2014" data-es="4.9 · +500 Reseñas · Desde 2014">4.9 · 500+ Reviews · Since 2014</span>
+        </div>
+
+        <h1>
+          <span data-en="Where Miami" data-es="Donde Miami">Where Miami</span><br>
+          <em data-en="Gets Its Glow" data-es="Brilla">Gets Its Glow</em>
+        </h1>
+
+        <p class="hero-sub" data-en="Advanced aesthetic treatments by certified medical professionals. Non-invasive. Precision-driven. Real results." data-es="Tratamientos estéticos avanzados por profesionales médicos certificados. No invasivos. Precisos. Resultados reales.">
+          Advanced aesthetic treatments by certified medical professionals.<br>Non-invasive. Precision-driven. Real results.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#booking" class="btn btn-primary btn-lg" data-en="Book Your Visit" data-es="Reservar Cita">Book Your Visit</a>
+          <a href="tel:3054561170" class="btn btn-ghost btn-lg" data-en="Call Us: 305-456-1170" data-es="Llámanos: 305-456-1170">Call Us: 305-456-1170</a>
+        </div>
+      </div>
+
+      <a href="#trust-strip" class="hero-scroll" aria-label="Scroll to next section">
+        <span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         TRUST STRIP — Why CLP
+    ═══════════════════════════════════════════════ -->
+    <section id="trust-strip">
+      <div class="container">
+        <ul class="trust-list" role="list">
+          <li class="trust-item reveal">
+            <span class="trust-icon" aria-hidden="true">⚕</span>
+            <span data-en="Medical Director on Staff" data-es="Director Médico en Instalaciones">Medical Director on Staff</span>
+          </li>
+          <li class="trust-divider" aria-hidden="true"></li>
+          <li class="trust-item reveal">
+            <span class="trust-icon" aria-hidden="true">◈</span>
+            <span data-en="Since 2014 — 10+ Years" data-es="Desde 2014 — +10 Años">Since 2014 — 10+ Years</span>
+          </li>
+          <li class="trust-divider" aria-hidden="true"></li>
+          <li class="trust-item reveal">
+            <span class="trust-icon" aria-hidden="true">❄</span>
+            <span data-en="Pain-Free Sapphire Laser" data-es="Láser de Zafiro Sin Dolor">Pain-Free Sapphire Laser</span>
+          </li>
+          <li class="trust-divider" aria-hidden="true"></li>
+          <li class="trust-item reveal">
+            <span class="trust-icon" aria-hidden="true">◎</span>
+            <span data-en="Bilingual Team EN / ES" data-es="Equipo Bilingüe EN / ES">Bilingual Team EN / ES</span>
+          </li>
+          <li class="trust-divider" aria-hidden="true"></li>
+          <li class="trust-item reveal">
+            <span class="trust-icon" aria-hidden="true">◇</span>
+            <span data-en="Cherry &amp; CareCredit Financing" data-es="Financiamiento Cherry y CareCredit">Cherry &amp; CareCredit Financing</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PROMOTIONS
+    ═══════════════════════════════════════════════ -->
+    <section id="promotions">
+      <div class="container">
+        <div class="promo-card reveal">
+          <div class="promo-card-label" data-en="Limited Offer" data-es="Oferta Limitada">Limited Offer</div>
+          <h2 data-en="20% Off Your First Laser Session" data-es="20% de Descuento en Tu Primera Sesión Láser">20% Off Your First<br><em>Laser Session</em></h2>
+          <p data-en="New clients only. Mention this offer when booking. Valid on any laser hair removal session." data-es="Solo nuevos clientes. Menciona esta oferta al reservar. Válido en cualquier sesión de depilación láser.">New clients only. Mention this offer when booking. Valid on any laser hair removal session.</p>
+          <a href="#booking" class="btn btn-primary" data-en="Claim Offer" data-es="Reclamar Oferta">Claim Offer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SOCIAL PROOF
+    ═══════════════════════════════════════════════ -->
+    <section id="social-proof">
+      <div class="container">
+        <div class="section-label" data-en="Real Results, Real People" data-es="Resultados Reales, Personas Reales">Real Results, Real People</div>
+        <div class="rating-block reveal">
+          <div class="rating-score">4.9</div>
+          <div class="rating-details">
+            <div class="stars-large" aria-label="4.9 out of 5 stars">★★★★★</div>
+            <div class="rating-sub" data-en="500+ verified reviews" data-es="+500 reseñas verificadas">500+ verified reviews</div>
+          </div>
+        </div>
+
+        <div class="testimonials-wrapper">
+          <div class="testimonials-track" id="testimonials-track" aria-live="polite">
+
+            <blockquote class="testimonial active">
+              <p>"After years trying other places, CLP is the only clinic I trust for my laser treatments. The sapphire tip is genuinely painless — I've referred every friend I have."</p>
+              <footer>
+                <strong>Maria G.</strong>
+                <span class="service-tag">Laser Hair Removal</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>"Yadenis is incredible. My Botox looks so natural — everyone thinks I just look rested, not 'done.' That's exactly what I wanted."</p>
+              <footer>
+                <strong>Jennifer L.</strong>
+                <span class="service-tag">Botox</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>"The team is bilingual, warm, and incredibly professional. Midy made me feel at home from day one. I drive 30 minutes just to come here."</p>
+              <footer>
+                <strong>Carlos R.</strong>
+                <span class="service-tag">Body Sculpting</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>"I've had my lip fillers done three times here and the results are always perfect. Honest pricing, zero pressure, perfect execution every time."</p>
+              <footer>
+                <strong>Sofia M.</strong>
+                <span class="service-tag">Dermal Fillers</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>"The IV therapy is exactly what I needed after a long week. Quick, effective, no gimmicks. I book it monthly now — it's become part of my routine."</p>
+              <footer>
+                <strong>David P.</strong>
+                <span class="service-tag">IV Therapy</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>"George walked me through my entire tattoo removal plan with detail I've never gotten anywhere else. You can tell this is a team that genuinely knows their equipment."</p>
+              <footer>
+                <strong>Ana B.</strong>
+                <span class="service-tag">Tattoo Removal</span>
+              </footer>
+            </blockquote>
+
+          </div>
+
+          <div class="testimonials-dots" id="testimonials-dots" aria-label="Testimonial navigation" role="tablist">
+            <button class="dot active" data-index="0" aria-label="Testimonial 1" role="tab" aria-selected="true"></button>
+            <button class="dot" data-index="1" aria-label="Testimonial 2" role="tab" aria-selected="false"></button>
+            <button class="dot" data-index="2" aria-label="Testimonial 3" role="tab" aria-selected="false"></button>
+            <button class="dot" data-index="3" aria-label="Testimonial 4" role="tab" aria-selected="false"></button>
+            <button class="dot" data-index="4" aria-label="Testimonial 5" role="tab" aria-selected="false"></button>
+            <button class="dot" data-index="5" aria-label="Testimonial 6" role="tab" aria-selected="false"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         TREATMENTS
+    ═══════════════════════════════════════════════ -->
+    <section id="treatments">
+      <div class="container">
+        <div class="section-label reveal" data-en="Our Services" data-es="Nuestros Servicios">Our Services</div>
+        <h2 class="reveal">
+          <span data-en="Treatments" data-es="Tratamientos">Treatments</span>
+          <em data-en=" That Work" data-es=" Que Funcionan"> That Work</em>
+        </h2>
+        <p class="section-sub reveal" data-en="Every service is performed by trained, certified professionals under medical supervision." data-es="Cada servicio es realizado por profesionales capacitados y certificados bajo supervisión médica.">Every service is performed by trained, certified professionals under medical supervision.</p>
+
+        <div class="treatments-grid">
+
+          <!-- Card 1: Laser Hair Removal -->
+          <div class="treatment-card reveal" data-treatment="laser-hair">
+            <div class="tc-header">
+              <span class="tc-icon" aria-hidden="true">✦</span>
+              <h3 data-en="Laser Hair Removal" data-es="Depilación Láser">Laser Hair Removal</h3>
+              <p class="tc-sub" data-en="Virtually painless with our sapphire cooling technology" data-es="Prácticamente sin dolor con nuestra tecnología de enfriamiento de zafiro">Virtually painless with our sapphire cooling technology</p>
+              <button class="tc-toggle" aria-expanded="false" data-en="Learn More" data-es="Saber Más">Learn More</button>
+            </div>
+            <div class="tc-drawer">
+              <ul>
+                <li data-en="FDA-cleared sapphire cooling tip — all skin types and tones" data-es="Punta de zafiro aprobada por la FDA — todos los tipos y tonos de piel">FDA-cleared sapphire cooling tip — all skin types and tones</li>
+                <li data-en="6–8 sessions recommended for lasting results" data-es="Se recomiendan 6–8 sesiones para resultados duraderos">6–8 sessions recommended for lasting results</li>
+                <li data-en="Zero downtime — return to daily activities immediately" data-es="Sin tiempo de recuperación — regresa a tus actividades inmediatamente">Zero downtime — return to daily activities immediately</li>
+                <li data-en="Financing available through Cherry &amp; CareCredit" data-es="Financiamiento disponible a través de Cherry y CareCredit">Financing available through Cherry &amp; CareCredit</li>
+              </ul>
+              <p class="disclaimer" data-en="Results vary. Consultation required." data-es="Los resultados varían. Se requiere consulta.">Results vary. Consultation required.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Botox & Dysport -->
+          <div class="treatment-card reveal" data-treatment="botox">
+            <div class="tc-header">
+              <span class="tc-icon" aria-hidden="true">◈</span>
+              <h3 data-en="Botox &amp; Dysport" data-es="Botox y Dysport">Botox &amp; Dysport</h3>
+              <p class="tc-sub" data-en="Smooth wrinkles naturally — preventive and corrective treatments" data-es="Suaviza las arrugas de forma natural — tratamientos preventivos y correctivos">Smooth wrinkles naturally — preventive and corrective treatments</p>
+              <button class="tc-toggle" aria-expanded="false" data-en="Learn More" data-es="Saber Más">Learn More</button>
+            </div>
+            <div class="tc-drawer">
+              <ul>
+                <li data-en="Targets forehead lines, crow's feet, and brow furrows" data-es="Trata líneas de expresión, patas de gallo y entre cejas">Targets forehead lines, crow's feet, and brow furrows</li>
+                <li data-en="Onset in 3–5 days; full effect in 2 weeks" data-es="Inicio en 3–5 días; efecto completo en 2 semanas">Onset in 3–5 days; full effect in 2 weeks</li>
+                <li data-en="Results last 3–4 months on average" data-es="Los resultados duran un promedio de 3–4 meses">Results last 3–4 months on average</li>
+                <li data-en="Minimal downtime — avoid lying flat for 4h post-treatment" data-es="Tiempo de recuperación mínimo — evita acostarte por 4h post-tratamiento">Minimal downtime — avoid lying flat for 4h post-treatment</li>
+              </ul>
+              <p class="disclaimer" data-en="Results vary. Consultation required." data-es="Los resultados varían. Se requiere consulta.">Results vary. Consultation required.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Dermal Fillers -->
+          <div class="treatment-card reveal" data-treatment="fillers">
+            <div class="tc-header">
+              <span class="tc-icon" aria-hidden="true">◎</span>
+              <h3 data-en="Dermal Fillers" data-es="Rellenos Dérmicos">Dermal Fillers</h3>
+              <p class="tc-sub" data-en="Volume, lift, and lip enhancement with FDA-approved HA fillers" data-es="Volumen, lifting y realce de labios con rellenos de HA aprobados por la FDA">Volume, lift, and lip enhancement with FDA-approved HA fillers</p>
+              <button class="tc-toggle" aria-expanded="false" data-en="Learn More" data-es="Saber Más">Learn More</button>
+            </div>
+            <div class="tc-drawer">
+              <ul>
+                <li data-en="Lips, cheeks, nasolabial folds, under-eye hollows" data-es="Labios, mejillas, surcos nasolabiales, ojeras">Lips, cheeks, nasolabial folds, under-eye hollows</li>
+                <li data-en="FDA-approved hyaluronic acid — natural and reversible" data-es="Ácido hialurónico aprobado por la FDA — natural y reversible">FDA-approved hyaluronic acid — natural and reversible</li>
+                <li data-en="Lasts 6–18 months depending on area and product" data-es="Dura 6–18 meses según la zona y el producto">Lasts 6–18 months depending on area and product</li>
+                <li data-en="Mild swelling possible for 24–48h" data-es="Puede haber leve hinchazón durante 24–48h">Mild swelling possible for 24–48h</li>
+              </ul>
+              <p class="disclaimer" data-en="Results vary. Consultation required." data-es="Los resultados varían. Se requiere consulta.">Results vary. Consultation required.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Facials & PRP -->
+          <div class="treatment-card reveal" data-treatment="facials">
+            <div class="tc-header">
+              <span class="tc-icon" aria-hidden="true">❋</span>
+              <h3 data-en="Facials &amp; PRP" data-es="Faciales y PRP">Facials &amp; PRP</h3>
+              <p class="tc-sub" data-en="Medical-grade facials and platelet-rich plasma rejuvenation" data-es="Faciales de grado médico y rejuvenecimiento con plasma rico en plaquetas">Medical-grade facials and platelet-rich plasma rejuvenation</p>
+              <button class="tc-toggle" aria-expanded="false" data-en="Learn More" data-es="Saber Más">Learn More</button>
+            </div>
+            <div class="tc-drawer">
+              <ul>
+                <li data-en="Options: medical-grade peels, microdermabrasion, anti-acne" data-es="Opciones: peelings de grado médico, microdermoabrasión, anti-acné">Options: medical-grade peels, microdermabrasion, anti-acne</li>
+                <li data-en="PRP uses your own growth factors for natural rejuvenation" data-es="El PRP usa tus propios factores de crecimiento para rejuvenecimiento natural">PRP uses your own growth factors for natural rejuvenation</li>
+                <li data-en="3–6 PRP sessions for optimal results" data-es="3–6 sesiones de PRP para resultados óptimos">3–6 PRP sessions for optimal results</li>
+                <li data-en="Mild redness resolves within 24–48h" data-es="El leve enrojecimiento desaparece en 24–48h">Mild redness resolves within 24–48h</li>
+              </ul>
+              <p class="disclaimer" data-en="Results vary. Consultation required." data-es="Los resultados varían. Se requiere consulta.">Results vary. Consultation required.</p>
+            </div>
+          </div>
+
+          <!-- Card 5: Body Sculpting -->
+          <div class="treatment-card reveal" data-treatment="body">
+            <div class="tc-header">
+              <span class="tc-icon" aria-hidden="true">◆</span>
+              <h3 data-en="Body Sculpting" data-es="Escultura Corporal">Body Sculpting</h3>
+              <p class="tc-sub" data-en="EMSlim, Beautifill, and fat-dissolving injections for real contour" data-es="EMSlim, Beautifill e inyecciones disolventes de grasa para un contorno real">EMSlim, Beautifill, and fat-dissolving injections for real contour</p>
+              <button class="tc-toggle" aria-expanded="false" data-en="Learn More" data-es="Saber Más">Learn More</button>
+            </div>
+            <div class="tc-drawer">
+              <ul>
+                <li data-en="EMSlim: builds muscle &amp; reduces fat simultaneously" data-es="EMSlim: construye músculo y reduce grasa simultáneamente">EMSlim: builds muscle &amp; reduces fat simultaneously</li>
+                <li data-en="Equivalent to 20,000 contractions per session" data-es="Equivalente a 20,000 contracciones por sesión">Equivalent to 20,000 contractions per session</li>
+                <li data-en="4 sessions recommended (2 per week)" data-es="Se recomiendan 4 sesiones (2 por semana)">4 sessions recommended (2 per week)</li>
+                <li data-en="Zero downtime — walk in, walk out" data-es="Sin tiempo de recuperación — entra y sal">Zero downtime — walk in, walk out</li>
+              </ul>
+              <p class="disclaimer" data-en="Results vary. Consultation required." data-es="Los resultados varían. Se requiere consulta.">Results vary. Consultation required.</p>
+            </div>
+          </div>
+
+          <!-- Card 6: Tattoo Removal -->
+          <div class="treatment-card reveal" data-treatment="tattoo">
+            <div class="tc-header">
+              <span class="tc-icon" aria-hidden="true">◉</span>
+              <h3 data-en="Tattoo Removal" data-es="Eliminación de Tatuajes">Tattoo Removal</h3>
+              <p class="tc-sub" data-en="Precision laser targeting — all ink colors, all skin tones" data-es="Láser de precisión — todos los colores de tinta, todos los tonos de piel">Precision laser targeting — all ink colors, all skin tones</p>
+              <button class="tc-toggle" aria-expanded="false" data-en="Learn More" data-es="Saber Más">Learn More</button>
+            </div>
+            <div class="tc-drawer">
+              <ul>
+                <li data-en="Laser breaks down ink pigment for natural absorption" data-es="El láser descompone el pigmento de tinta para absorción natural">Laser breaks down ink pigment for natural absorption</li>
+                <li data-en="4–12+ sessions depending on size, color, and depth" data-es="4–12+ sesiones según tamaño, color y profundidad">4–12+ sessions depending on size, color, and depth</li>
+                <li data-en="6–8 weeks between sessions for skin recovery" data-es="6–8 semanas entre sesiones para la recuperación de la piel">6–8 weeks between sessions for skin recovery</li>
+                <li data-en="24–48h aftercare required post-session" data-es="Se requieren 24–48h de cuidado posterior a la sesión">24–48h aftercare required post-session</li>
+              </ul>
+              <p class="disclaimer" data-en="Results vary. Consultation required." data-es="Los resultados varían. Se requiere consulta.">Results vary. Consultation required.</p>
+            </div>
+          </div>
+
+          <!-- Card 7: IV Therapy -->
+          <div class="treatment-card reveal" data-treatment="iv">
+            <div class="tc-header">
+              <span class="tc-icon" aria-hidden="true">◑</span>
+              <h3 data-en="IV Therapy" data-es="Terapia IV">IV Therapy</h3>
+              <p class="tc-sub" data-en="Hydration, vitamins, and targeted wellness — 30 to 60 minutes" data-es="Hidratación, vitaminas y bienestar dirigido — 30 a 60 minutos">Hydration, vitamins, and targeted wellness — 30 to 60 minutes</p>
+              <button class="tc-toggle" aria-expanded="false" data-en="Learn More" data-es="Saber Más">Learn More</button>
+            </div>
+            <div class="tc-drawer">
+              <ul>
+                <li data-en="Options: hydration, vitamin boost, immune support, energy, recovery" data-es="Opciones: hidratación, refuerzo vitamínico, soporte inmune, energía, recuperación">Options: hydration, vitamin boost, immune support, energy, recovery</li>
+                <li data-en="30–60 min per session in a comfortable setting" data-es="30–60 min por sesión en un entorno cómodo">30–60 min per session in a comfortable setting</li>
+                <li data-en="Monthly or as-needed — no long-term commitment" data-es="Mensual o según sea necesario — sin compromiso a largo plazo">Monthly or as-needed — no long-term commitment</li>
+                <li data-en="Zero downtime — feel the difference immediately" data-es="Sin tiempo de recuperación — siente la diferencia de inmediato">Zero downtime — feel the difference immediately</li>
+              </ul>
+              <p class="disclaimer" data-en="Results vary. Consultation required." data-es="Los resultados varían. Se requiere consulta.">Results vary. Consultation required.</p>
+            </div>
+          </div>
+
+          <!-- Card 8: Hormone Optimization -->
+          <div class="treatment-card reveal" data-treatment="hormone">
+            <div class="tc-header">
+              <span class="tc-icon" aria-hidden="true">❂</span>
+              <h3 data-en="Hormone Optimization" data-es="Optimización Hormonal">Hormone Optimization</h3>
+              <p class="tc-sub" data-en="HRT consultation and ongoing hormonal health — for men and women" data-es="Consulta de TRH y salud hormonal continua — para hombres y mujeres">HRT consultation and ongoing hormonal health — for men and women</p>
+              <button class="tc-toggle" aria-expanded="false" data-en="Learn More" data-es="Saber Más">Learn More</button>
+            </div>
+            <div class="tc-drawer">
+              <ul>
+                <li data-en="Hormone assessment, HRT planning, thyroid support" data-es="Evaluación hormonal, planificación de TRH, soporte tiroideo">Hormone assessment, HRT planning, thyroid support</li>
+                <li data-en="For both men and women of all ages" data-es="Para hombres y mujeres de todas las edades">For both men and women of all ages</li>
+                <li data-en="Initial consultation + lab work required" data-es="Se requiere consulta inicial + análisis de laboratorio">Initial consultation + lab work required</li>
+                <li data-en="Quarterly monitoring and plan adjustment" data-es="Monitoreo trimestral y ajuste del plan">Quarterly monitoring and plan adjustment</li>
+              </ul>
+              <p class="disclaimer" data-en="Results vary. Consultation required." data-es="Los resultados varían. Se requiere consulta.">Results vary. Consultation required.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA after treatments -->
+        <div class="section-cta reveal">
+          <a href="#booking" class="btn btn-primary btn-lg" data-en="Book a Consultation" data-es="Reservar Consulta">Book a Consultation</a>
+          <a href="tel:3054561170" class="btn btn-ghost btn-lg" data-en="Or call us now" data-es="O llámanos ahora">Or call us now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         BEFORE / AFTER GALLERY
+    ═══════════════════════════════════════════════ -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-label reveal" data-en="Before &amp; After" data-es="Antes y Después">Before &amp; After</div>
+        <h2 class="reveal" data-en="Real Results" data-es="Resultados Reales">Real Results</h2>
+        <p class="section-sub reveal" data-en="Photos shared with patient consent. Lighting and individual results vary. Always consult a provider." data-es="Fotos compartidas con consentimiento del paciente. La iluminación y los resultados individuales varían. Siempre consulte a un proveedor.">Photos shared with patient consent. Lighting and individual results vary. Always consult a provider.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" data-label="Laser Hair Removal" tabindex="0" role="button" aria-label="View before and after: Laser Hair Removal">
+            <div class="gallery-before"><span>Before</span></div>
+            <div class="gallery-after"><span>After</span></div>
+            <div class="gallery-label">Laser Hair Removal</div>
+          </div>
+          <div class="gallery-item reveal" data-label="Botox — Forehead" tabindex="0" role="button" aria-label="View before and after: Botox Forehead">
+            <div class="gallery-before"><span>Before</span></div>
+            <div class="gallery-after"><span>After</span></div>
+            <div class="gallery-label">Botox — Forehead</div>
+          </div>
+          <div class="gallery-item reveal" data-label="Lip Fillers" tabindex="0" role="button" aria-label="View before and after: Lip Fillers">
+            <div class="gallery-before"><span>Before</span></div>
+            <div class="gallery-after"><span>After</span></div>
+            <div class="gallery-label">Lip Fillers</div>
+          </div>
+          <div class="gallery-item reveal" data-label="Body Sculpting" tabindex="0" role="button" aria-label="View before and after: Body Sculpting">
+            <div class="gallery-before"><span>Before</span></div>
+            <div class="gallery-after"><span>After</span></div>
+            <div class="gallery-label">Body Sculpting</div>
+          </div>
+          <div class="gallery-item reveal" data-label="PRP Facial" tabindex="0" role="button" aria-label="View before and after: PRP Facial">
+            <div class="gallery-before"><span>Before</span></div>
+            <div class="gallery-after"><span>After</span></div>
+            <div class="gallery-label">PRP Facial</div>
+          </div>
+          <div class="gallery-item reveal" data-label="Tattoo Removal" tabindex="0" role="button" aria-label="View before and after: Tattoo Removal">
+            <div class="gallery-before"><span>Before</span></div>
+            <div class="gallery-after"><span>After</span></div>
+            <div class="gallery-label">Tattoo Removal</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery lightbox" hidden>
+      <button id="lightbox-close" aria-label="Close">×</button>
+      <div class="lightbox-content">
+        <div class="lightbox-pair">
+          <div class="lb-before"><span>Before</span></div>
+          <div class="lb-after"><span>After</span></div>
+        </div>
+        <p class="lightbox-label" id="lightbox-label"></p>
+        <p class="lightbox-disclaimer" data-en="Photos shared with patient consent. Results vary." data-es="Fotos compartidas con consentimiento del paciente. Los resultados varían.">Photos shared with patient consent. Results vary.</p>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         TEAM
+    ═══════════════════════════════════════════════ -->
+    <section id="team">
+      <div class="container">
+        <div class="section-label reveal" data-en="Our Providers" data-es="Nuestros Proveedores">Our Providers</div>
+        <h2 class="reveal" data-en="The People Behind Your Results" data-es="Las Personas Detrás de Tus Resultados">The People Behind<br><em>Your Results</em></h2>
+        <p class="section-sub reveal" data-en="Every treatment at CLP is performed by credentialed, experienced professionals — no shortcuts, no exceptions." data-es="Cada tratamiento en CLP es realizado por profesionales acreditados y experimentados — sin atajos, sin excepciones.">Every treatment at CLP is performed by credentialed, experienced professionals — no shortcuts, no exceptions.</p>
+
+        <div class="team-grid">
+
+          <div class="team-card reveal">
+            <div class="team-avatar" style="--hue: 210" aria-hidden="true">OM</div>
+            <h3>Dr. Otto Marquez Mendoza</h3>
+            <span class="team-title" data-en="Medical Director" data-es="Director Médico">Medical Director</span>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar" style="--hue: 160" aria-hidden="true">GB</div>
+            <h3>George J. Burns</h3>
+            <span class="team-title" data-en="Owner · Paramedic · Laser Safety Officer" data-es="Propietario · Paramédico · Oficial de Seguridad Láser">Owner · Paramedic · Laser Safety Officer</span>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar" style="--hue: 330" aria-hidden="true">MB</div>
+            <h3>Midy Silverio Burns</h3>
+            <span class="team-title" data-en="Owner · Paramedic · CME · Aesthetician" data-es="Propietaria · Paramédica · CME · Esteticista">Owner · Paramedic · CME · Aesthetician</span>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar" style="--hue: 270" aria-hidden="true">YA</div>
+            <h3>Yadenis Achiong</h3>
+            <span class="team-title" data-en="Lead APRN Nurse Practitioner" data-es="Enfermera Practicante APRN Principal">Lead APRN Nurse Practitioner</span>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar" style="--hue: 20" aria-hidden="true">GB</div>
+            <h3>Giovanna Benito</h3>
+            <span class="team-title" data-en="Nurse Practitioner" data-es="Enfermera Practicante">Nurse Practitioner</span>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-avatar" style="--hue: 60" aria-hidden="true">AH</div>
+            <h3>Angela Hidalgo</h3>
+            <span class="team-title" data-en="Lead Facial Specialist &amp; Aesthetician" data-es="Especialista Facial Principal y Esteticista">Lead Facial Specialist &amp; Aesthetician</span>
+          </div>
+
+        </div>
+
+        <div class="team-trust reveal">
+          <p data-en="All treatments are performed under the medical supervision of Dr. Otto Marquez Mendoza. CLP is fully licensed and compliant with Florida state medical spa regulations." data-es="Todos los tratamientos se realizan bajo la supervisión médica del Dr. Otto Marquez Mendoza. CLP está completamente licenciado y cumple con las regulaciones de med spas del estado de Florida.">All treatments are performed under the medical supervision of Dr. Otto Marquez Mendoza. CLP is fully licensed and compliant with Florida state medical spa regulations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         LOCATION & HOURS
+    ═══════════════════════════════════════════════ -->
+    <section id="location">
+      <div class="container">
+        <div class="section-label reveal" data-en="Find Us" data-es="Encuéntranos">Find Us</div>
+        <h2 class="reveal" data-en="Come See Us in Miami" data-es="Visítanos en Miami">Come See Us<br><em>in Miami</em></h2>
+
+        <div class="location-grid">
+          <div class="location-map reveal">
+            <iframe
+              title="CLP Med Spa location map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.7!2d-80.4123!3d25.6921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9c9dba8e01c41%3A0x1!2s8501+SW+124th+Ave+%23212a%2C+Miami%2C+FL+33183!5e0!3m2!1sen!2sus!4v1"
+              width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <div class="location-info reveal">
+            <div class="location-detail">
+              <h3 data-en="Address" data-es="Dirección">Address</h3>
+              <address>
+                8501 SW 124th Ave, Suite 212a<br>
+                Miami, Florida 33183
+              </address>
+              <a href="https://maps.google.com/?q=8501+SW+124th+Ave+Suite+212a+Miami+FL+33183" class="btn btn-ghost btn-sm" target="_blank" rel="noopener" data-en="Get Directions" data-es="Cómo Llegar">Get Directions</a>
+            </div>
+
+            <div class="location-detail">
+              <h3 data-en="Hours" data-es="Horario">Hours</h3>
+              <table class="hours-table">
+                <tbody>
+                  <tr>
+                    <td data-en="Monday – Friday" data-es="Lunes – Viernes">Monday – Friday</td>
+                    <td>10:00 am – 7:00 pm</td>
+                  </tr>
+                  <tr>
+                    <td data-en="Saturday" data-es="Sábado">Saturday</td>
+                    <td>11:00 am – 3:00 pm</td>
+                  </tr>
+                  <tr>
+                    <td data-en="Sunday" data-es="Domingo">Sunday</td>
+                    <td data-en="Closed" data-es="Cerrado">Closed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="location-detail">
+              <h3 data-en="Arrival Note" data-es="Nota de Llegada">Arrival Note</h3>
+              <p data-en="Free parking available in the building lot. Check in at Suite 212a on the second floor. Please arrive 5–10 minutes early for your first visit." data-es="Estacionamiento gratuito disponible en el lote del edificio. Regístrate en la Suite 212a en el segundo piso. Por favor llega 5–10 minutos antes en tu primera visita.">Free parking available in the building lot. Check in at Suite 212a on the second floor. Please arrive 5–10 minutes early for your first visit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         BOOKING
+    ═══════════════════════════════════════════════ -->
+    <section id="booking">
+      <div class="container">
+        <div class="booking-inner reveal">
+          <div class="section-label" data-en="Ready?" data-es="¿Listo?">Ready?</div>
+          <h2 data-en="Book Your Visit" data-es="Reserva Tu Cita">Book Your<br><em>Visit</em></h2>
+          <p data-en="Choose a time online in minutes, or call us directly. Not sure what to book? Start with a free consult." data-es="Elige un horario en línea en minutos, o llámanos directamente. ¿No sabes qué reservar? Comienza con una consulta gratuita.">Choose a time online in minutes, or call us directly.<br>Not sure what to book? Start with a free consult.</p>
+
+          <div class="booking-ctas">
+            <a href="#" class="btn btn-primary btn-lg" data-en="Book Online (PatientNow)" data-es="Reservar en Línea (PatientNow)">Book Online (PatientNow)</a>
+            <a href="tel:3054561170" class="btn btn-ghost btn-lg" data-en="Call 305-456-1170" data-es="Llamar 305-456-1170">Call 305-456-1170</a>
+          </div>
+
+          <p class="booking-consult" data-en="Not sure which treatment is right for you? We offer free 15-minute phone consultations." data-es="¿No sabes cuál tratamiento es para ti? Ofrecemos consultas telefónicas gratuitas de 15 minutos.">Not sure which treatment is right for you? <a href="tel:3054561170" data-en="Book a free consult →" data-es="Reserva una consulta gratuita →">Book a free consult →</a></p>
+
+          <div class="financing-badges">
+            <span class="financing-label" data-en="Financing available:" data-es="Financiamiento disponible:">Financing available:</span>
+            <span class="badge" data-en="Cherry Financing" data-es="Financiamiento Cherry">Cherry Financing</span>
+            <span class="badge" data-en="CareCredit" data-es="CareCredit">CareCredit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════════ -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-label reveal" data-en="Get in Touch" data-es="Contáctanos">Get in Touch</div>
+        <h2 class="reveal" data-en="We'd Love to Hear From You" data-es="Nos Encantaría Saber de Ti">We'd Love to<br><em>Hear From You</em></h2>
+
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder="Jane Smith" />
+            </div>
+            <div class="form-group">
+              <label for="phone" data-en="Phone or Email" data-es="Teléfono o Correo">Phone or Email</label>
+              <input type="text" id="phone" name="phone" autocomplete="tel email" required placeholder="305-555-0100 or jane@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="message" data-en="How can we help?" data-es="¿Cómo podemos ayudarte?">How can we help?</label>
+              <textarea id="message" name="message" rows="4" required placeholder="I'm interested in..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
+            <p class="form-note" data-en="We typically respond within 1 business day." data-es="Por lo general respondemos en 1 día hábil.">We typically respond within 1 business day.</p>
+          </form>
+
+          <div class="contact-info reveal">
+            <a href="tel:3054561170" class="contact-item">
+              <span class="contact-icon" aria-hidden="true">☎</span>
+              <div>
+                <strong data-en="Call or Text" data-es="Llamar o Enviar Mensaje">Call or Text</strong>
+                <span>305-456-1170</span>
+              </div>
+            </a>
+            <a href="mailto:NewMe@CLPMedSpa.com" class="contact-item">
+              <span class="contact-icon" aria-hidden="true">✉</span>
+              <div>
+                <strong data-en="Email" data-es="Correo Electrónico">Email</strong>
+                <span>NewMe@CLPMedSpa.com</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/clp_medspa" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon" aria-hidden="true">◈</span>
+              <div>
+                <strong>Instagram</strong>
+                <span>@clp_medspa</span>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/CLP.med.spa" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon" aria-hidden="true">◎</span>
+              <div>
+                <strong>Facebook</strong>
+                <span>CLP.med.spa</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         FAQ
+    ═══════════════════════════════════════════════ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-label reveal" data-en="Common Questions" data-es="Preguntas Frecuentes">Common Questions</div>
+        <h2 class="reveal" data-en="FAQ" data-es="FAQ">FAQ</h2>
+
+        <div class="faq-list reveal">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-en="Does laser hair removal hurt?" data-es="¿Duele la depilación láser?">Does laser hair removal hurt?</button>
+            <div class="faq-answer">
+              <p data-en="Our sapphire cooling tip technology makes laser hair removal virtually painless. Most clients describe the sensation as a light snap — far less discomfort than traditional waxing. Sensitive areas may feel slightly more intense, but our team will adjust settings to keep you comfortable." data-es="Nuestra tecnología de punta de zafiro enfriada hace que la depilación láser sea prácticamente indolora. La mayoría de los clientes describen la sensación como un ligero chasquido — mucho menos molesta que la cera tradicional.">Our sapphire cooling tip technology makes laser hair removal virtually painless. Most clients describe the sensation as a light snap — far less discomfort than traditional waxing. Sensitive areas may feel slightly more intense, but our team will adjust settings to keep you comfortable.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-en="How many laser sessions will I need?" data-es="¿Cuántas sesiones láser necesitaré?">How many laser sessions will I need?</button>
+            <div class="faq-answer">
+              <p data-en="Most clients achieve optimal results in 6–8 sessions. Hair grows in cycles, so each session targets a different phase of growth. The exact number depends on your skin tone, hair color, and treatment area. We'll give you a personalized plan during your consultation." data-es="La mayoría de los clientes logran resultados óptimos en 6–8 sesiones. El cabello crece en ciclos, por lo que cada sesión apunta a una fase diferente del crecimiento.">Most clients achieve optimal results in 6–8 sessions. Hair grows in cycles, so each session targets a different phase of growth. The exact number depends on your skin tone, hair color, and treatment area. We'll give you a personalized plan during your consultation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-en="Is laser treatment safe for dark skin tones?" data-es="¿El tratamiento láser es seguro para tonos de piel oscuros?">Is laser treatment safe for dark skin tones?</button>
+            <div class="faq-answer">
+              <p data-en="Yes. Our sapphire cooling technology is FDA-cleared for all skin types and tones, including Fitzpatrick types IV–VI. We have extensive experience treating Miami's diverse population. Your provider will assess your skin and customize the treatment parameters at your consultation." data-es="Sí. Nuestra tecnología de zafiro aprobada por la FDA es segura para todos los tipos y tonos de piel, incluyendo los tipos Fitzpatrick IV–VI.">Yes. Our sapphire cooling technology is FDA-cleared for all skin types and tones, including Fitzpatrick types IV–VI. We have extensive experience treating Miami's diverse population. Your provider will assess your skin and customize the treatment parameters at your consultation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-en="How long does Botox last?" data-es="¿Cuánto dura el Botox?">How long does Botox last?</button>
+            <div class="faq-answer">
+              <p data-en="Results typically last 3–4 months. With regular treatments, many clients find their results last longer over time as the targeted muscles gradually weaken. We recommend scheduling a follow-up about 2–3 weeks after your first treatment to assess results." data-es="Los resultados típicamente duran 3–4 meses. Con tratamientos regulares, muchos clientes encuentran que sus resultados duran más con el tiempo.">Results typically last 3–4 months. With regular treatments, many clients find their results last longer over time as the targeted muscles gradually weaken. We recommend scheduling a follow-up about 2–3 weeks after your first treatment to assess results.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-en="What is your cancellation policy?" data-es="¿Cuál es su política de cancelación?">What is your cancellation policy?</button>
+            <div class="faq-answer">
+              <p data-en="We require 24-hour notice for cancellations or rescheduling. Late cancellations or no-shows may incur a fee. We understand life happens — please contact us as early as possible if you need to change your appointment." data-es="Requerimos 24 horas de aviso para cancelaciones o reprogramaciones. Las cancelaciones tardías o ausencias pueden incurrir en un cargo.">We require 24-hour notice for cancellations or rescheduling. Late cancellations or no-shows may incur a fee. We understand life happens — please contact us as early as possible if you need to change your appointment.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-en="Do you offer financing?" data-es="¿Ofrecen financiamiento?">Do you offer financing?</button>
+            <div class="faq-answer">
+              <p data-en="Yes. We accept Cherry Financing and CareCredit, which allow you to split the cost of treatments into monthly payments. Ask our front desk team about current promotional rates — many clients are approved in minutes." data-es="Sí. Aceptamos Cherry Financing y CareCredit, que le permiten dividir el costo de los tratamientos en pagos mensuales.">Yes. We accept Cherry Financing and CareCredit, which allow you to split the cost of treatments into monthly payments. Ask our front desk team about current promotional rates — many clients are approved in minutes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-en="What should I do before my appointment?" data-es="¿Qué debo hacer antes de mi cita?">What should I do before my appointment?</button>
+            <div class="faq-answer">
+              <p data-en="For laser hair removal: shave the area 24h before, avoid sun exposure for 2 weeks prior, and skip any retinol or exfoliants for 48h. For injectables: avoid blood thinners (aspirin, fish oil) for 3–5 days before. We'll send you full prep instructions when you book." data-es="Para depilación láser: aféitate el área 24h antes, evita la exposición al sol por 2 semanas, y omite retinol o exfoliantes por 48h. Para inyectables: evita anticoagulantes por 3–5 días antes.">For laser hair removal: shave the area 24h before, avoid sun exposure for 2 weeks prior, and skip any retinol or exfoliants for 48h. For injectables: avoid blood thinners (aspirin, fish oil) for 3–5 days before. We'll send you full prep instructions when you book.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" data-en="Is there medical supervision on-site?" data-es="¿Hay supervisión médica en el lugar?">Is there medical supervision on-site?</button>
+            <div class="faq-answer">
+              <p data-en="Yes. All treatments at CLP are performed under the medical supervision of our Medical Director, Dr. Otto Marquez Mendoza. Our owners are both licensed paramedics, and our nurse practitioners hold active Florida APRN licenses. You're in qualified hands." data-es="Sí. Todos los tratamientos en CLP se realizan bajo la supervisión médica de nuestro Director Médico, Dr. Otto Marquez Mendoza.">Yes. All treatments at CLP are performed under the medical supervision of our Medical Director, Dr. Otto Marquez Mendoza. Our owners are both licensed paramedics, and our nurse practitioners hold active Florida APRN licenses. You're in qualified hands.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         POLICIES
+    ═══════════════════════════════════════════════ -->
+    <section id="policies">
+      <div class="container">
+        <div class="policies-toggle reveal">
+          <button class="policies-btn" aria-expanded="false" data-en="Clinic Policies" data-es="Políticas de la Clínica">Clinic Policies</button>
+          <div class="policies-content">
+            <div class="policy-block">
+              <h4 data-en="Cancellation &amp; No-Show" data-es="Cancelación y No Presentarse">Cancellation &amp; No-Show</h4>
+              <p data-en="24-hour advance notice required for all cancellations and rescheduling. No-shows and same-day cancellations may be charged a fee at our discretion." data-es="Se requieren 24 horas de anticipación para todas las cancelaciones y reprogramaciones. Las ausencias y cancelaciones del mismo día pueden cobrar una tarifa.">24-hour advance notice required for all cancellations and rescheduling. No-shows and same-day cancellations may be charged a fee at our discretion.</p>
+            </div>
+            <div class="policy-block">
+              <h4 data-en="Late Arrivals" data-es="Llegadas Tarde">Late Arrivals</h4>
+              <p data-en="Clients arriving more than 10 minutes late may need to reschedule. We respect every client's appointment time." data-es="Los clientes que lleguen más de 10 minutos tarde pueden necesitar reprogramar. Respetamos el tiempo de cita de cada cliente.">Clients arriving more than 10 minutes late may need to reschedule. We respect every client's appointment time.</p>
+            </div>
+            <div class="policy-block">
+              <h4 data-en="Check-In" data-es="Registro">Check-In</h4>
+              <p data-en="Please arrive 5–10 minutes early for your first visit to complete intake paperwork. Suite 212a, second floor." data-es="Por favor llega 5–10 minutos antes en tu primera visita para completar el papeleo de ingreso. Suite 212a, segundo piso.">Please arrive 5–10 minutes early for your first visit to complete intake paperwork. Suite 212a, second floor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-clp">CLP</span>
+          <span class="logo-subtitle">Med Spa</span>
+          <p data-en="Miami's premier medical aesthetic center, serving the community with precision and care since 2014." data-es="Centro estético médico premier de Miami, sirviendo a la comunidad con precisión y cuidado desde 2014.">Miami's premier medical aesthetic center, serving the community with precision and care since 2014.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/clp_medspa" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            <a href="https://www.facebook.com/CLP.med.spa" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4 data-en="Services" data-es="Servicios">Services</h4>
+          <ul role="list">
+            <li><a href="#treatments" data-en="Laser Hair Removal" data-es="Depilación Láser">Laser Hair Removal</a></li>
+            <li><a href="#treatments" data-en="Botox &amp; Dysport" data-es="Botox y Dysport">Botox &amp; Dysport</a></li>
+            <li><a href="#treatments" data-en="Dermal Fillers" data-es="Rellenos Dérmicos">Dermal Fillers</a></li>
+            <li><a href="#treatments" data-en="Body Sculpting" data-es="Escultura Corporal">Body Sculpting</a></li>
+            <li><a href="#treatments" data-en="IV Therapy" data-es="Terapia IV">IV Therapy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 data-en="Contact" data-es="Contacto">Contact</h4>
+          <address>
+            8501 SW 124th Ave, Suite 212a<br>
+            Miami, Florida 33183
+          </address>
+          <a href="tel:3054561170">305-456-1170</a>
+          <a href="mailto:NewMe@CLPMedSpa.com">NewMe@CLPMedSpa.com</a>
+        </div>
+
+        <div class="footer-hours">
+          <h4 data-en="Hours" data-es="Horario">Hours</h4>
+          <table class="hours-table">
+            <tbody>
+              <tr><td data-en="Mon – Fri" data-es="Lun – Vie">Mon – Fri</td><td>10am – 7pm</td></tr>
+              <tr><td data-en="Saturday" data-es="Sábado">Saturday</td><td>11am – 3pm</td></tr>
+              <tr><td data-en="Sunday" data-es="Domingo">Sunday</td><td data-en="Closed" data-es="Cerrado">Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 CLP Med Spa · All rights reserved · <a href="#policies" data-en="Clinic Policies" data-es="Políticas">Clinic Policies</a></p>
+        <p class="footer-disclaimer" data-en="Results vary. All treatments require consultation. CLP Med Spa is a licensed Florida medical aesthetic center." data-es="Los resultados varían. Todos los tratamientos requieren consulta. CLP Med Spa es un centro estético médico licenciado en Florida.">Results vary. All treatments require consultation. CLP Med Spa is a licensed Florida medical aesthetic center.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       MOBILE ACTION BAR
+  ═══════════════════════════════════════════════ -->
+  <div id="mobile-action-bar" role="navigation" aria-label="Quick actions">
+    <a href="tel:3054561170" class="mob-action">
+      <span aria-hidden="true">☎</span>
+      <span data-en="Call" data-es="Llamar">Call</span>
+    </a>
+    <a href="#booking" class="mob-action mob-action-primary">
+      <span aria-hidden="true">◈</span>
+      <span data-en="Book" data-es="Reservar">Book</span>
+    </a>
+    <a href="https://maps.google.com/?q=8501+SW+124th+Ave+Suite+212a+Miami+FL+33183" target="_blank" rel="noopener" class="mob-action">
+      <span aria-hidden="true">◎</span>
+      <span data-en="Directions" data-es="Cómo Llegar">Directions</span>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
