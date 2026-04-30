@@ -508,9 +508,10 @@ p    { line-height: 1.7; }
    TRUST STRIP
 ═══════════════════════════════════════════════════════ */
 #trust-strip {
-  background: var(--teal);
+  background: var(--navy);
   padding: 0;
-  border-top: 1px solid rgba(201,169,110,0.15);
+  border-top: 1px solid rgba(201,169,110,0.10);
+  border-bottom: 1px solid rgba(201,169,110,0.10);
   /* NO overflow-x: auto — ever */
 }
 .trust-list {
@@ -550,19 +551,15 @@ p    { line-height: 1.7; }
    PROMOTIONS — compact banner
 ═══════════════════════════════════════════════════════ */
 #promotions {
-  padding: 1.5rem 0;
-  background: var(--teal);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 2rem 0;
+  background: var(--navy);
 }
 .promo-card {
   position: relative;
-  background: linear-gradient(105deg, rgba(6,8,16,0.75) 0%, rgba(6,8,16,0.60) 55%, rgba(13,61,74,0.45) 100%);
+  background: linear-gradient(105deg, rgba(13,61,74,0.35) 0%, rgba(13,61,74,0.18) 55%, transparent 100%);
   border: 1px solid var(--gold-20);
   border-radius: var(--radius);
   overflow: hidden;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 .promo-card::before {
   content: '';
@@ -1462,7 +1459,7 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
 #location,
 #footer { isolation: isolate; }
 
-/* ── Trust Strip — gold seam right edge ── */
+/* ── Trust Strip — subtle gold glow each side on dark navy ── */
 #trust-strip { position: relative; }
 #trust-strip::before {
   content: '';
@@ -1471,17 +1468,8 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
   pointer-events: none;
   z-index: -1;
   background:
-    radial-gradient(ellipse 55% 120% at 100% 50%,  rgba(201,169,110,0.09) 0%, transparent 70%),
-    radial-gradient(ellipse 30% 100% at 0%   50%,  rgba(13,61,74,0.55)    0%, transparent 60%);
-}
-/* hairline gold seam at top */
-#trust-strip::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(201,169,110,0.35) 40%, rgba(201,169,110,0.35) 60%, transparent 100%);
-  pointer-events: none;
+    radial-gradient(ellipse 45% 120% at 0%   50%, rgba(201,169,110,0.05) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 120% at 100% 50%, rgba(201,169,110,0.05) 0%, transparent 65%);
 }
 
 /* ── Social Proof — rose bottom-left, gold top-right ── */
@@ -1498,7 +1486,7 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
     radial-gradient(ellipse 70% 40% at 50%  50%,  rgba(201,169,110,0.03) 0%, transparent 80%);
 }
 
-/* ── Promotions — dark depth left, gold hint right (on teal bg) ── */
+/* ── Promotions — teal whisper behind card, gold hint right ── */
 #promotions { position: relative; }
 #promotions::before {
   content: '';
@@ -1507,8 +1495,8 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
   pointer-events: none;
   z-index: -1;
   background:
-    radial-gradient(ellipse 50% 120% at 0%   50%, rgba(6,8,16,0.20)      0%, transparent 60%),
-    radial-gradient(ellipse 40% 120% at 100% 50%, rgba(201,169,110,0.07) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 150% at 50% 50%, rgba(13,61,74,0.18)     0%, transparent 70%),
+    radial-gradient(ellipse 35% 120% at 100% 50%, rgba(201,169,110,0.05) 0%, transparent 60%);
 }
 
 /* ── Treatments — soft gold center glow ── */
