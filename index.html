@@ -42,7 +42,7 @@
       <div class="nav-actions">
         <button class="lang-toggle" id="lang-toggle" aria-label="Switch to Spanish">ES</button>
         <a href="tel:3054561170" class="btn btn-ghost btn-sm" data-en="Call" data-es="Llamar">Call</a>
-        <a href="#contact" class="btn btn-primary btn-sm" data-en="Book Now" data-es="Reservar">Book Now</a>
+        <a href="#" class="btn btn-primary btn-sm" id="nav-book-btn" data-en="Book Now" data-es="Reservar">Book Now</a>
       </div>
 
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -57,11 +57,11 @@
         <li><a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a></li>
         <li><a href="#team" data-en="Team" data-es="Equipo">Team</a></li>
         <li><a href="#location" data-en="Location" data-es="Ubicación">Location</a></li>
-        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="tel:3054561170" data-en="Call Us" data-es="Llámanos">Call Us</a></li>
       </ul>
       <div class="mobile-menu-ctas">
         <a href="tel:3054561170" class="btn btn-ghost" data-en="Call 305-456-1170" data-es="Llamar 305-456-1170">Call 305-456-1170</a>
-        <a href="#contact" class="btn btn-primary" data-en="Book Your Visit" data-es="Reservar Cita">Book Your Visit</a>
+        <a href="#" class="btn btn-primary" id="mobile-book-btn" data-en="Book Your Visit" data-es="Reservar Cita">Book Your Visit</a>
       </div>
     </div>
   </header>
@@ -94,7 +94,7 @@
         </p>
 
         <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary btn-lg" data-en="Book Your Visit" data-es="Reservar Cita">Book Your Visit</a>
+          <a href="#" class="btn btn-primary btn-lg" id="hero-book-btn" data-en="Book Your Visit" data-es="Reservar Cita">Book Your Visit</a>
           <a href="tel:3054561170" class="btn btn-ghost btn-lg" data-en="Call Us" data-es="Llámanos">Call Us</a>
         </div>
       </div>
@@ -228,7 +228,7 @@
               <div class="promo-card-label" data-en="Limited Offer" data-es="Oferta Limitada">Limited Offer</div>
               <p class="promo-headline" data-en="20% off your first laser session — new clients only" data-es="20% de descuento en tu primera sesión láser — solo nuevos clientes">20% off your first laser session — <em>new clients only</em></p>
             </div>
-            <a href="#contact" class="btn btn-primary" data-en="Claim Offer" data-es="Reclamar Oferta">Claim Offer</a>
+            <a href="#" class="btn btn-primary" id="promo-book-btn" data-en="Claim Offer" data-es="Reclamar Oferta">Claim Offer</a>
           </div>
         </div>
       </div>
@@ -404,7 +404,7 @@
 
         <!-- CTA after treatments -->
         <div class="section-cta reveal">
-          <a href="#contact" class="btn btn-primary btn-lg" data-en="Get in Touch" data-es="Contáctanos">Get in Touch</a>
+          <a href="#" class="btn btn-primary btn-lg" id="treatments-book-btn" data-en="Book a Consultation" data-es="Reservar Consulta">Book a Consultation</a>
           <a href="tel:3054561170" class="btn btn-ghost btn-lg" data-en="Call Us" data-es="Llámanos">Call Us</a>
         </div>
       </div>
@@ -580,66 +580,6 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         CONTACT
-    ═══════════════════════════════════════════════ -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-label reveal" data-en="Get in Touch" data-es="Contáctanos">Get in Touch</div>
-        <h2 class="reveal" data-en="We'd Love to Hear From You" data-es="Nos Encantaría Saber de Ti">We'd Love to<br><em>Hear From You</em></h2>
-
-        <div class="contact-grid">
-          <form class="contact-form reveal" id="contact-form" novalidate>
-            <div class="form-group">
-              <label for="name" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required placeholder="Jane Smith" />
-            </div>
-            <div class="form-group">
-              <label for="phone" data-en="Phone or Email" data-es="Teléfono o Correo">Phone or Email</label>
-              <input type="text" id="phone" name="phone" autocomplete="tel email" required placeholder="305-555-0100 or jane@email.com" />
-            </div>
-            <div class="form-group">
-              <label for="message" data-en="How can we help?" data-es="¿Cómo podemos ayudarte?">How can we help?</label>
-              <textarea id="message" name="message" rows="4" required placeholder="I'm interested in..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
-            <p class="form-note" data-en="We typically respond within 1 business day." data-es="Por lo general respondemos en 1 día hábil.">We typically respond within 1 business day.</p>
-          </form>
-
-          <div class="contact-info reveal">
-            <a href="tel:3054561170" class="contact-item">
-              <span class="contact-icon" aria-hidden="true">☎</span>
-              <div>
-                <strong data-en="Call or Text" data-es="Llamar o Enviar Mensaje">Call or Text</strong>
-                <span>305-456-1170</span>
-              </div>
-            </a>
-            <a href="mailto:NewMe@CLPMedSpa.com" class="contact-item">
-              <span class="contact-icon" aria-hidden="true">✉</span>
-              <div>
-                <strong data-en="Email" data-es="Correo Electrónico">Email</strong>
-                <span>NewMe@CLPMedSpa.com</span>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/clp_medspa" target="_blank" rel="noopener" class="contact-item">
-              <span class="contact-icon" aria-hidden="true">◈</span>
-              <div>
-                <strong>Instagram</strong>
-                <span>@clp_medspa</span>
-              </div>
-            </a>
-            <a href="https://www.facebook.com/CLP.med.spa" target="_blank" rel="noopener" class="contact-item">
-              <span class="contact-icon" aria-hidden="true">◎</span>
-              <div>
-                <strong>Facebook</strong>
-                <span>CLP.med.spa</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════
          FAQ
     ═══════════════════════════════════════════════ -->
     <section id="faq">
@@ -765,12 +705,34 @@
 
         <div class="footer-contact">
           <h4 data-en="Contact" data-es="Contacto">Contact</h4>
-          <address>
-            8501 SW 124th Ave, Suite 212a<br>
-            Miami, Florida 33183
-          </address>
-          <a href="tel:3054561170">305-456-1170</a>
-          <a href="mailto:NewMe@CLPMedSpa.com">NewMe@CLPMedSpa.com</a>
+          <a href="tel:3054561170" class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">☎</span>
+            <div>
+              <strong data-en="Call or Text" data-es="Llamar o Escribir">Call or Text</strong>
+              <span>305-456-1170</span>
+            </div>
+          </a>
+          <a href="mailto:NewMe@CLPMedSpa.com" class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">✉</span>
+            <div>
+              <strong data-en="Email" data-es="Correo">Email</strong>
+              <span>NewMe@CLPMedSpa.com</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/clp_medspa" target="_blank" rel="noopener" class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">◈</span>
+            <div>
+              <strong>Instagram</strong>
+              <span>@clp_medspa</span>
+            </div>
+          </a>
+          <a href="https://www.facebook.com/CLP.med.spa" target="_blank" rel="noopener" class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">◎</span>
+            <div>
+              <strong>Facebook</strong>
+              <span>CLP.med.spa</span>
+            </div>
+          </a>
         </div>
 
         <div class="footer-hours">
@@ -800,7 +762,7 @@
       <span aria-hidden="true">☎</span>
       <span data-en="Call" data-es="Llamar">Call</span>
     </a>
-    <a href="#contact" class="mob-action mob-action-primary">
+    <a href="#" class="mob-action mob-action-primary" id="mob-book-btn">
       <span aria-hidden="true">◈</span>
       <span data-en="Book" data-es="Reservar">Book</span>
     </a>
