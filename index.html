@@ -1039,6 +1039,208 @@
     </a>
   </div>
 
+  <!-- ═══════════════════════════════════════════════
+       BOOKING MODAL
+  ═══════════════════════════════════════════════ -->
+  <div id="booking-modal" class="bm-overlay" role="dialog" aria-modal="true" aria-labelledby="bm-title" hidden>
+    <div class="bm-panel">
+
+      <!-- Close -->
+      <button class="bm-close" id="bm-close" aria-label="Close">×</button>
+
+      <!-- Header -->
+      <div class="bm-header">
+        <div class="bm-brand">CLP <span>MED SPA</span></div>
+        <h2 class="bm-title" id="bm-title" data-en="Book Your Visit" data-es="Reserva tu Visita">Book Your Visit</h2>
+        <div class="bm-stepper" aria-label="Booking progress">
+          <div class="bm-dot active" data-s="1"></div>
+          <div class="bm-dot-line"></div>
+          <div class="bm-dot" data-s="2"></div>
+          <div class="bm-dot-line"></div>
+          <div class="bm-dot" data-s="3"></div>
+        </div>
+      </div>
+
+      <!-- ── STEP 1 : Service ───────────────────── -->
+      <div class="bm-body active" id="bm-s1">
+        <p class="bm-step-lbl" data-en="Step 1 of 3 · Choose a service" data-es="Paso 1 de 3 · Elige un servicio">Step 1 of 3 · Choose a service</p>
+        <div class="bm-service-grid">
+          <button class="bm-svc" data-svc="Laser Hair Removal">
+            <span class="bm-svc-icon" aria-hidden="true">❄</span>
+            <span data-en="Laser Hair Removal" data-es="Depilación Láser">Laser Hair Removal</span>
+          </button>
+          <button class="bm-svc" data-svc="Botox &amp; Dysport">
+            <span class="bm-svc-icon" aria-hidden="true">◈</span>
+            <span data-en="Botox &amp; Dysport" data-es="Botox y Dysport">Botox &amp; Dysport</span>
+          </button>
+          <button class="bm-svc" data-svc="Dermal Fillers">
+            <span class="bm-svc-icon" aria-hidden="true">◇</span>
+            <span data-en="Dermal Fillers" data-es="Rellenos Dérmicos">Dermal Fillers</span>
+          </button>
+          <button class="bm-svc" data-svc="Facials &amp; PRP">
+            <span class="bm-svc-icon" aria-hidden="true">✦</span>
+            <span data-en="Facials &amp; PRP" data-es="Faciales y PRP">Facials &amp; PRP</span>
+          </button>
+          <button class="bm-svc" data-svc="Body Sculpting">
+            <span class="bm-svc-icon" aria-hidden="true">⬡</span>
+            <span data-en="Body Sculpting" data-es="Escultura Corporal">Body Sculpting</span>
+          </button>
+          <button class="bm-svc" data-svc="Tattoo Removal">
+            <span class="bm-svc-icon" aria-hidden="true">⊗</span>
+            <span data-en="Tattoo Removal" data-es="Eliminación de Tatuajes">Tattoo Removal</span>
+          </button>
+          <button class="bm-svc" data-svc="IV Therapy">
+            <span class="bm-svc-icon" aria-hidden="true">⚕</span>
+            <span data-en="IV Therapy" data-es="Terapia IV">IV Therapy</span>
+          </button>
+          <button class="bm-svc" data-svc="Hormone Optimization">
+            <span class="bm-svc-icon" aria-hidden="true">⬟</span>
+            <span data-en="Hormone Optimization" data-es="Optimización Hormonal">Hormone Optimization</span>
+          </button>
+        </div>
+        <p class="bm-consult-note">
+          <span data-en="Not sure what to book?" data-es="¿No sabes qué reservar?">Not sure what to book?</span>
+          <button class="bm-link" id="bm-free-consult" data-en="Book a free consultation →" data-es="Reserva una consulta gratuita →">Book a free consultation →</button>
+        </p>
+      </div>
+
+      <!-- ── STEP 2 : Provider ──────────────────── -->
+      <div class="bm-body" id="bm-s2">
+        <p class="bm-step-lbl" data-en="Step 2 of 3 · Choose a provider" data-es="Paso 2 de 3 · Elige un proveedor">Step 2 of 3 · Choose a provider</p>
+        <div class="bm-provider-list">
+
+          <label class="bm-prov">
+            <input type="radio" name="bm-provider" value="First Available" checked>
+            <div class="bm-prov-card">
+              <div class="bm-avatar bm-avatar-star">★</div>
+              <div class="bm-prov-info">
+                <span class="bm-prov-name" data-en="First Available" data-es="Primer Disponible">First Available</span>
+                <span class="bm-prov-title" data-en="Recommended · fastest scheduling" data-es="Recomendado · programación más rápida">Recommended · fastest scheduling</span>
+              </div>
+              <div class="bm-prov-check" aria-hidden="true">✓</div>
+            </div>
+          </label>
+
+          <label class="bm-prov">
+            <input type="radio" name="bm-provider" value="Dr. Otto Marquez Mendoza">
+            <div class="bm-prov-card">
+              <div class="bm-avatar">OM</div>
+              <div class="bm-prov-info">
+                <span class="bm-prov-name">Dr. Otto Marquez Mendoza</span>
+                <span class="bm-prov-title" data-en="Medical Director" data-es="Director Médico">Medical Director</span>
+              </div>
+              <div class="bm-prov-check" aria-hidden="true">✓</div>
+            </div>
+          </label>
+
+          <label class="bm-prov">
+            <input type="radio" name="bm-provider" value="George J. Burns">
+            <div class="bm-prov-card">
+              <div class="bm-avatar">GB</div>
+              <div class="bm-prov-info">
+                <span class="bm-prov-name">George J. Burns</span>
+                <span class="bm-prov-title" data-en="Owner · Laser Safety Officer" data-es="Propietario · Oficial de Seguridad Láser">Owner · Laser Safety Officer</span>
+              </div>
+              <div class="bm-prov-check" aria-hidden="true">✓</div>
+            </div>
+          </label>
+
+          <label class="bm-prov">
+            <input type="radio" name="bm-provider" value="Midy Silverio Burns">
+            <div class="bm-prov-card">
+              <div class="bm-avatar">MS</div>
+              <div class="bm-prov-info">
+                <span class="bm-prov-name">Midy Silverio Burns</span>
+                <span class="bm-prov-title" data-en="Owner · CME · Aesthetician" data-es="Propietaria · CME · Esteticista">Owner · CME · Aesthetician</span>
+              </div>
+              <div class="bm-prov-check" aria-hidden="true">✓</div>
+            </div>
+          </label>
+
+          <label class="bm-prov">
+            <input type="radio" name="bm-provider" value="Yadenis Achiong">
+            <div class="bm-prov-card">
+              <div class="bm-avatar">YA</div>
+              <div class="bm-prov-info">
+                <span class="bm-prov-name">Yadenis Achiong</span>
+                <span class="bm-prov-title" data-en="Lead APRN Nurse Practitioner" data-es="Enfermera Practicante APRN">Lead APRN Nurse Practitioner</span>
+              </div>
+              <div class="bm-prov-check" aria-hidden="true">✓</div>
+            </div>
+          </label>
+
+          <label class="bm-prov">
+            <input type="radio" name="bm-provider" value="Giovanna Benito">
+            <div class="bm-prov-card">
+              <div class="bm-avatar">GB</div>
+              <div class="bm-prov-info">
+                <span class="bm-prov-name">Giovanna Benito</span>
+                <span class="bm-prov-title" data-en="Nurse Practitioner" data-es="Enfermera Practicante">Nurse Practitioner</span>
+              </div>
+              <div class="bm-prov-check" aria-hidden="true">✓</div>
+            </div>
+          </label>
+
+          <label class="bm-prov">
+            <input type="radio" name="bm-provider" value="Angela Hidalgo">
+            <div class="bm-prov-card">
+              <div class="bm-avatar">AH</div>
+              <div class="bm-prov-info">
+                <span class="bm-prov-name">Angela Hidalgo</span>
+                <span class="bm-prov-title" data-en="Lead Facial Specialist &amp; Aesthetician" data-es="Especialista Facial Principal">Lead Facial Specialist &amp; Aesthetician</span>
+              </div>
+              <div class="bm-prov-check" aria-hidden="true">✓</div>
+            </div>
+          </label>
+
+        </div>
+        <div class="bm-nav">
+          <button class="bm-back" id="bm-s2-back" data-en="← Back" data-es="← Atrás">← Back</button>
+          <button class="bm-next btn btn-primary" id="bm-s2-next" data-en="Next →" data-es="Siguiente →">Next →</button>
+        </div>
+      </div>
+
+      <!-- ── STEP 3 : Confirm ───────────────────── -->
+      <div class="bm-body" id="bm-s3">
+        <p class="bm-step-lbl" data-en="Step 3 of 3 · Review &amp; continue" data-es="Paso 3 de 3 · Revisar y continuar">Step 3 of 3 · Review &amp; continue</p>
+
+        <!-- Summary -->
+        <div class="bm-summary">
+          <div class="bm-sum-row">
+            <span class="bm-sum-key" data-en="Service" data-es="Servicio">Service</span>
+            <span class="bm-sum-val" id="bm-sum-svc">—</span>
+          </div>
+          <div class="bm-sum-row">
+            <span class="bm-sum-key" data-en="Provider" data-es="Proveedor">Provider</span>
+            <span class="bm-sum-val" id="bm-sum-prov">—</span>
+          </div>
+        </div>
+
+        <!-- Policy -->
+        <div class="bm-policy-box">
+          <p class="bm-policy-title" data-en="📋 Cancellation Policy" data-es="📋 Política de Cancelación">📋 Cancellation Policy</p>
+          <p class="bm-policy-text" data-en="24 hours notice required to cancel or reschedule. A $25 fee applies for late cancellations or no-shows. A credit or debit card is required on file to secure your appointment." data-es="Se requiere aviso de 24 horas para cancelar o reprogramar. Se aplica una tarifa de $25 por cancelaciones tardías o ausencias. Se requiere una tarjeta en archivo para asegurar su cita.">24 hours notice required to cancel or reschedule. A $25 fee applies for late cancellations or no-shows. A credit or debit card is required on file to secure your appointment.</p>
+        </div>
+
+        <label class="bm-agree">
+          <input type="checkbox" id="bm-agree-chk">
+          <span class="bm-agree-box" aria-hidden="true"></span>
+          <span data-en="I understand and agree to the cancellation policy." data-es="Entiendo y acepto la política de cancelación.">I understand and agree to the cancellation policy.</span>
+        </label>
+
+        <div class="bm-nav bm-nav-confirm">
+          <button class="bm-back" id="bm-s3-back" data-en="← Back" data-es="← Atrás">← Back</button>
+          <a href="https://www.patientnow.app/clp-med-spa" class="btn btn-primary bm-continue" id="bm-continue" target="_blank" rel="noopener noreferrer" data-en="Continue to PatientNow →" data-es="Continuar a PatientNow →">Continue to PatientNow →</a>
+        </div>
+
+        <p class="bm-handoff" data-en="You'll select your date, time, and payment on PatientNow — CLP's secure booking platform." data-es="Seleccionarás tu fecha, hora y pago en PatientNow — la plataforma segura de CLP.">You'll select your date, time, and payment on PatientNow — CLP's secure booking platform.</p>
+
+        <p class="bm-financing-note" data-en="Cherry &amp; CareCredit financing available — ask at check-in." data-es="Financiamiento Cherry y CareCredit disponible — pregunte al registrarse.">Cherry &amp; CareCredit financing available — ask at check-in.</p>
+      </div>
+
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>

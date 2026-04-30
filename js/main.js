@@ -322,11 +322,141 @@ if (contactForm) {
 /* ─── SMOOTH SCROLL OFFSET (for sticky header) ────────── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', e => {
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (!target) return;
+    const href = anchor.getAttribute('href');
+    if (href === '#' || !document.querySelector(href)) return;
     e.preventDefault();
+    const target = document.querySelector(href);
     const headerH = siteHeader.offsetHeight + promoBanner.offsetHeight + 16;
     const top = target.getBoundingClientRect().top + window.scrollY - headerH;
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+
+/* ─── BOOKING MODAL ───────────────────────────────────── */
+(function () {
+  const modal      = document.getElementById('booking-modal');
+  const panel      = modal.querySelector('.bm-panel');
+  const closeBtn   = document.getElementById('bm-close');
+  const agreeChk   = document.getElementById('bm-agree-chk');
+  const continueBtn= document.getElementById('bm-continue');
+  const sumSvc     = document.getElementById('bm-sum-svc');
+  const sumProv    = document.getElementById('bm-sum-prov');
+
+  // Step elements
+  const bodies     = modal.querySelectorAll('.bm-body');
+  const dots       = modal.querySelectorAll('.bm-dot');
+  const dotLines   = modal.querySelectorAll('.bm-dot-line');
+
+  let selectedService  = '';
+  let currentStep      = 1;
+
+  // ── Open / close ──────────────────────────────────────
+  function openModal(preselect) {
+    resetModal();
+    if (preselect) selectService(preselect);
+    modal.hidden = false;
+    requestAnimationFrame(() => modal.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.addEventListener('transitionend', () => {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+    }, { once: true });
+  }
+
+  function resetModal() {
+    currentStep = 1;
+    selectedService = '';
+    agreeChk.checked = false;
+    continueBtn.classList.remove('enabled');
+    modal.querySelectorAll('.bm-svc').forEach(b => b.classList.remove('selected'));
+    const firstRadio = modal.querySelector('input[name="bm-provider"]');
+    if (firstRadio) firstRadio.checked = true;
+    goToStep(1);
+    panel.scrollTop = 0;
+  }
+
+  // ── Step navigation ────────────────────────────────────
+  function goToStep(n) {
+    currentStep = n;
+    bodies.forEach((b, i) => b.classList.toggle('active', i + 1 === n));
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i + 1 === n);
+      d.classList.toggle('done',   i + 1 < n);
+    });
+    dotLines.forEach((l, i) => l.classList.toggle('done', i + 1 < n));
+    panel.scrollTop = 0;
+  }
+
+  // ── Service selection ──────────────────────────────────
+  function selectService(name) {
+    selectedService = name;
+    modal.querySelectorAll('.bm-svc').forEach(b => {
+      b.classList.toggle('selected', b.dataset.svc === name);
+    });
+    // Auto-advance to step 2
+    setTimeout(() => goToStep(2), 160);
+  }
+
+  modal.querySelectorAll('.bm-svc').forEach(btn => {
+    btn.addEventListener('click', () => selectService(btn.dataset.svc));
+  });
+
+  // Free consult shortcut
+  const freeConsultBtn = document.getElementById('bm-free-consult');
+  if (freeConsultBtn) {
+    freeConsultBtn.addEventListener('click', () => {
+      selectService('Free Consultation');
+    });
+  }
+
+  // ── Nav buttons ────────────────────────────────────────
+  document.getElementById('bm-s2-next').addEventListener('click', () => {
+    // Populate summary
+    const provInput = modal.querySelector('input[name="bm-provider"]:checked');
+    const provName  = provInput ? provInput.value : 'First Available';
+    sumSvc.textContent  = selectedService || '—';
+    sumProv.textContent = provName;
+    goToStep(3);
+  });
+
+  document.getElementById('bm-s2-back').addEventListener('click', () => goToStep(1));
+  document.getElementById('bm-s3-back').addEventListener('click', () => goToStep(2));
+
+  // ── Policy checkbox enables Continue ──────────────────
+  agreeChk.addEventListener('change', () => {
+    continueBtn.classList.toggle('enabled', agreeChk.checked);
+  });
+
+  // ── Close triggers ─────────────────────────────────────
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+
+  // ── Wire all Book buttons ──────────────────────────────
+  const bookIds = [
+    'nav-book-btn', 'mobile-book-btn', 'hero-book-btn',
+    'promo-book-btn', 'treatments-book-btn', 'mob-book-btn'
+  ];
+
+  bookIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+})();
