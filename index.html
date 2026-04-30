@@ -417,55 +417,255 @@
       <div class="container">
         <div class="section-label reveal" data-en="Before &amp; After" data-es="Antes y Después">Before &amp; After</div>
         <h2 class="reveal" data-en="Real Results" data-es="Resultados Reales">Real Results</h2>
-        <p class="section-sub reveal" data-en="Photos shared with patient consent. Lighting and individual results vary. Always consult a provider." data-es="Fotos compartidas con consentimiento del paciente. La iluminación y los resultados individuales varían. Siempre consulte a un proveedor.">Photos shared with patient consent. Lighting and individual results vary. Always consult a provider.</p>
+        <p class="section-sub reveal" data-en="Hover over each photo to reveal the result. Photos shared with patient consent." data-es="Pasa el cursor sobre cada foto para ver el resultado. Fotos compartidas con consentimiento del paciente.">Hover over each photo to reveal the result. Photos shared with patient consent.</p>
 
-        <div class="gallery-grid">
-          <div class="gallery-item reveal" data-label="Laser Hair Removal" tabindex="0" role="button" aria-label="View before and after: Laser Hair Removal">
-            <div class="gallery-before"><span>Before</span></div>
-            <div class="gallery-after"><span>After</span></div>
-            <div class="gallery-label">Laser Hair Removal</div>
-          </div>
-          <div class="gallery-item reveal" data-label="Botox — Forehead" tabindex="0" role="button" aria-label="View before and after: Botox Forehead">
-            <div class="gallery-before"><span>Before</span></div>
-            <div class="gallery-after"><span>After</span></div>
-            <div class="gallery-label">Botox — Forehead</div>
-          </div>
-          <div class="gallery-item reveal" data-label="Lip Fillers" tabindex="0" role="button" aria-label="View before and after: Lip Fillers">
-            <div class="gallery-before"><span>Before</span></div>
-            <div class="gallery-after"><span>After</span></div>
-            <div class="gallery-label">Lip Fillers</div>
-          </div>
-          <div class="gallery-item reveal" data-label="Body Sculpting" tabindex="0" role="button" aria-label="View before and after: Body Sculpting">
-            <div class="gallery-before"><span>Before</span></div>
-            <div class="gallery-after"><span>After</span></div>
-            <div class="gallery-label">Body Sculpting</div>
-          </div>
-          <div class="gallery-item reveal" data-label="PRP Facial" tabindex="0" role="button" aria-label="View before and after: PRP Facial">
-            <div class="gallery-before"><span>Before</span></div>
-            <div class="gallery-after"><span>After</span></div>
-            <div class="gallery-label">PRP Facial</div>
-          </div>
-          <div class="gallery-item reveal" data-label="Tattoo Removal" tabindex="0" role="button" aria-label="View before and after: Tattoo Removal">
-            <div class="gallery-before"><span>Before</span></div>
-            <div class="gallery-after"><span>After</span></div>
-            <div class="gallery-label">Tattoo Removal</div>
-          </div>
+        <!-- Category filter pills -->
+        <div class="gallery-filters reveal" role="tablist" aria-label="Filter by treatment">
+          <button class="gf-btn active" data-filter="all" role="tab" aria-selected="true" data-en="All" data-es="Todos">All</button>
+          <button class="gf-btn" data-filter="hair" role="tab" aria-selected="false" data-en="Laser Hair" data-es="Depilación">Laser Hair</button>
+          <button class="gf-btn" data-filter="botox" role="tab" aria-selected="false" data-en="Botox" data-es="Botox">Botox</button>
+          <button class="gf-btn" data-filter="lips" role="tab" aria-selected="false" data-en="Lips" data-es="Labios">Lips</button>
+          <button class="gf-btn" data-filter="facial" role="tab" aria-selected="false" data-en="Facial &amp; PRP" data-es="Facial y PRP">Facial &amp; PRP</button>
+          <button class="gf-btn" data-filter="body" role="tab" aria-selected="false" data-en="Body" data-es="Cuerpo">Body</button>
+          <button class="gf-btn" data-filter="tattoo" role="tab" aria-selected="false" data-en="Tattoo" data-es="Tatuaje">Tattoo</button>
         </div>
+
+        <!-- Gallery grid — comparison sliders -->
+        <div class="gi-grid" id="gi-grid">
+
+          <!-- ── HAIR (6) ─────────────────────────── -->
+          <div class="gi-card reveal" data-category="hair" data-n="1">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Underarms</p>
+          </div>
+          <div class="gi-card reveal" data-category="hair" data-n="2">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Legs</p>
+          </div>
+          <div class="gi-card reveal" data-category="hair" data-n="3">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Bikini</p>
+          </div>
+          <div class="gi-card reveal" data-category="hair" data-n="4">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Face</p>
+          </div>
+          <div class="gi-card reveal" data-category="hair" data-n="5">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Back</p>
+          </div>
+          <div class="gi-card reveal" data-category="hair" data-n="6">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Arms</p>
+          </div>
+
+          <!-- ── BOTOX (6) ────────────────────────── -->
+          <div class="gi-card reveal" data-category="botox" data-n="1">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Forehead</p>
+          </div>
+          <div class="gi-card reveal" data-category="botox" data-n="2">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Crow's Feet</p>
+          </div>
+          <div class="gi-card reveal" data-category="botox" data-n="3">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Brow Lift</p>
+          </div>
+          <div class="gi-card reveal" data-category="botox" data-n="4">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Glabella</p>
+          </div>
+          <div class="gi-card reveal" data-category="botox" data-n="5">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Neck Lines</p>
+          </div>
+          <div class="gi-card reveal" data-category="botox" data-n="6">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Lip Flip</p>
+          </div>
+
+          <!-- ── LIPS (6) ─────────────────────────── -->
+          <div class="gi-card reveal" data-category="lips" data-n="1">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Lip Augmentation</p>
+          </div>
+          <div class="gi-card reveal" data-category="lips" data-n="2">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Natural Volume</p>
+          </div>
+          <div class="gi-card reveal" data-category="lips" data-n="3">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Lip Border</p>
+          </div>
+          <div class="gi-card reveal" data-category="lips" data-n="4">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Cupid's Bow</p>
+          </div>
+          <div class="gi-card reveal" data-category="lips" data-n="5">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Full Lips</p>
+          </div>
+          <div class="gi-card reveal" data-category="lips" data-n="6">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Hydration</p>
+          </div>
+
+          <!-- ── FACIAL (6) ───────────────────────── -->
+          <div class="gi-card reveal" data-category="facial" data-n="1">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">PRP Facial</p>
+          </div>
+          <div class="gi-card reveal" data-category="facial" data-n="2">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Chemical Peel</p>
+          </div>
+          <div class="gi-card reveal" data-category="facial" data-n="3">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Microdermabrasion</p>
+          </div>
+          <div class="gi-card reveal" data-category="facial" data-n="4">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Anti-Acne</p>
+          </div>
+          <div class="gi-card reveal" data-category="facial" data-n="5">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Brightening</p>
+          </div>
+          <div class="gi-card reveal" data-category="facial" data-n="6">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Rejuvenation</p>
+          </div>
+
+          <!-- ── BODY (6) ─────────────────────────── -->
+          <div class="gi-card reveal" data-category="body" data-n="1">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Abdomen</p>
+          </div>
+          <div class="gi-card reveal" data-category="body" data-n="2">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Flanks</p>
+          </div>
+          <div class="gi-card reveal" data-category="body" data-n="3">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Arms</p>
+          </div>
+          <div class="gi-card reveal" data-category="body" data-n="4">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Thighs</p>
+          </div>
+          <div class="gi-card reveal" data-category="body" data-n="5">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">EMSlim</p>
+          </div>
+          <div class="gi-card reveal" data-category="body" data-n="6">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Beautifill</p>
+          </div>
+
+          <!-- ── TATTOO (6) ───────────────────────── -->
+          <div class="gi-card reveal" data-category="tattoo" data-n="1">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Black Ink</p>
+          </div>
+          <div class="gi-card reveal" data-category="tattoo" data-n="2">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Color Ink</p>
+          </div>
+          <div class="gi-card reveal" data-category="tattoo" data-n="3">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Small Piece</p>
+          </div>
+          <div class="gi-card reveal" data-category="tattoo" data-n="4">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Wrist</p>
+          </div>
+          <div class="gi-card reveal" data-category="tattoo" data-n="5">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Arm Piece</p>
+          </div>
+          <div class="gi-card reveal" data-category="tattoo" data-n="6">
+            <div class="gi-before"><span class="gi-badge">Before</span></div>
+            <div class="gi-after"><span class="gi-badge">After</span></div>
+            <div class="gi-line" aria-hidden="true"><div class="gi-handle"><span>‹</span><span>›</span></div></div>
+            <p class="gi-label">Multi-Session</p>
+          </div>
+
+        </div><!-- /gi-grid -->
+
+        <p class="gallery-disclaimer reveal" data-en="Results vary. Lighting conditions differ across photos. All images shared with patient consent. Always consult a licensed provider." data-es="Los resultados varían. Las condiciones de iluminación difieren. Imágenes compartidas con consentimiento del paciente.">Results vary. Lighting conditions differ across photos. All images shared with patient consent. Always consult a licensed provider.</p>
       </div>
     </section>
-
-    <!-- Lightbox -->
-    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery lightbox" hidden>
-      <button id="lightbox-close" aria-label="Close">×</button>
-      <div class="lightbox-content">
-        <div class="lightbox-pair">
-          <div class="lb-before"><span>Before</span></div>
-          <div class="lb-after"><span>After</span></div>
-        </div>
-        <p class="lightbox-label" id="lightbox-label"></p>
-        <p class="lightbox-disclaimer" data-en="Photos shared with patient consent. Results vary." data-es="Fotos compartidas con consentimiento del paciente. Los resultados varían.">Photos shared with patient consent. Results vary.</p>
-      </div>
-    </div>
 
     <!-- ═══════════════════════════════════════════════
          TEAM

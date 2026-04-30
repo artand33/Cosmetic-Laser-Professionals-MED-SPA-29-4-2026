@@ -799,129 +799,233 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
 }
 
 /* ═══════════════════════════════════════════════════════
-   GALLERY
+   GALLERY — Before / After Comparison Slider
 ═══════════════════════════════════════════════════════ */
 #gallery {
   padding: var(--section-py) 0;
   background: var(--teal);
 }
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: 1.25rem;
-  margin-top: 3rem;
-}
-.gallery-item {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  aspect-ratio: 4/3;
-  border: 1px solid var(--w08);
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
-}
-.gallery-item:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-  border-color: var(--gold-30);
-}
-.gallery-item:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
-}
-.gallery-before, .gallery-after {
+
+/* ── Filter pills ── */
+.gallery-filters {
   display: flex;
-  align-items: flex-end;
-  padding: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
-.gallery-before {
-  background: linear-gradient(135deg, #1a1220 0%, #2a1e2e 100%);
-}
-.gallery-after {
-  background: linear-gradient(135deg, #0d2d38 0%, #12404f 100%);
-}
-.gallery-before span, .gallery-after span {
-  font-size: 0.62rem;
+.gf-btn {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--w40);
-  background: rgba(0,0,0,0.4);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  color: var(--w60);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 100px;
+  padding: 0.45rem 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
-.gallery-after span { color: var(--gold-light); }
-.gallery-label {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  text-align: center;
-  padding: 0.65rem;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
-  color: var(--w90);
+.gf-btn:hover {
+  color: var(--gold-light);
+  border-color: var(--gold-30);
+  background: rgba(201,169,110,0.08);
+}
+.gf-btn.active {
+  color: var(--navy);
+  background: var(--gold);
+  border-color: var(--gold);
 }
 
-/* Lightbox */
-#lightbox {
-  position: fixed;
+/* ── Card grid ── */
+.gi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Individual comparison card ── */
+.gi-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  cursor: col-resize;
+  border: 1px solid rgba(255,255,255,0.08);
+  user-select: none;
+  -webkit-user-select: none;
+  transition: box-shadow 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.gi-card:hover {
+  box-shadow: 0 14px 48px rgba(0,0,0,0.55);
+  border-color: rgba(201,169,110,0.25);
+  transform: translateY(-3px);
+}
+.gi-card.hidden {
+  display: none;
+}
+
+/* ── Before layer (always behind) ── */
+.gi-before {
+  position: absolute;
   inset: 0;
-  background: rgba(6,8,16,0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 500;
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem;
+}
+
+/* ── After layer (clipped from left; clip-path set by JS) ── */
+.gi-after {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);  /* default: hidden on right half */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0.75rem;
+}
+
+/* ── Before / After badge labels ── */
+.gi-badge {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.6rem;
+  border-radius: 100px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+.gi-before .gi-badge {
+  background: rgba(0,0,0,0.45);
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.gi-after .gi-badge {
+  background: rgba(201,169,110,0.2);
+  color: var(--gold-light);
+  border: 1px solid rgba(201,169,110,0.35);
+}
+
+/* ── Vertical divider line ── */
+.gi-line {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255,255,255,0.9);
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px rgba(255,255,255,0.35);
+  pointer-events: none;
+}
+
+/* ── Drag handle ── */
+.gi-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  gap: 1px;
+  font-size: 0.75rem;
+  color: var(--navy);
+  font-weight: 700;
+  pointer-events: none;
 }
-#lightbox[hidden] { display: none; }
-#lightbox-close {
+
+/* ── Treatment label at bottom ── */
+.gi-label {
   position: absolute;
-  top: 1.5rem; right: 1.5rem;
-  font-size: 2rem;
-  color: var(--w70);
-  width: 44px; height: 44px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  transition: background 0.2s, color 0.2s;
+  bottom: 0; left: 0; right: 0;
+  text-align: center;
+  padding: 1.75rem 0.75rem 0.65rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--w80);
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+  pointer-events: none;
 }
-#lightbox-close:hover { background: var(--w08); color: var(--white); }
-.lightbox-content { text-align: center; max-width: 700px; width: 100%; }
-.lightbox-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  aspect-ratio: 16/9;
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin-bottom: 1rem;
+
+/* ── Unique before/after gradient palettes per category ── */
+/* Hair */
+.gi-card[data-category="hair"] .gi-before {
+  background: linear-gradient(160deg, #12082a 0%, #201438 60%, #0e0f1f 100%);
 }
-.lb-before {
-  background: linear-gradient(135deg, #1a1220 0%, #2a1e2e 100%);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--w40);
+.gi-card[data-category="hair"] .gi-after {
+  background: linear-gradient(160deg, #051d26 0%, #083040 60%, #0a1520 100%);
 }
-.lb-after {
-  background: linear-gradient(135deg, #0d2d38 0%, #12404f 100%);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--gold-light);
+/* Botox */
+.gi-card[data-category="botox"] .gi-before {
+  background: linear-gradient(160deg, #1a0e0a 0%, #2e1812 60%, #140c06 100%);
 }
-.lightbox-label {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  color: var(--white);
-  margin-bottom: 0.5rem;
+.gi-card[data-category="botox"] .gi-after {
+  background: linear-gradient(160deg, #0a1a1a 0%, #0d2e2a 60%, #051514 100%);
 }
-.lightbox-disclaimer {
-  font-size: 0.72rem;
+/* Lips */
+.gi-card[data-category="lips"] .gi-before {
+  background: linear-gradient(160deg, #1a0a14 0%, #2e1020 60%, #12060e 100%);
+}
+.gi-card[data-category="lips"] .gi-after {
+  background: linear-gradient(160deg, #1a0620 0%, #2c0c38 60%, #100415 100%);
+}
+/* Facial */
+.gi-card[data-category="facial"] .gi-before {
+  background: linear-gradient(160deg, #0f1a0a 0%, #182e10 60%, #0a1406 100%);
+}
+.gi-card[data-category="facial"] .gi-after {
+  background: linear-gradient(160deg, #051820 0%, #082c38 60%, #031018 100%);
+}
+/* Body */
+.gi-card[data-category="body"] .gi-before {
+  background: linear-gradient(160deg, #1a0f0a 0%, #2c1a0c 60%, #120a04 100%);
+}
+.gi-card[data-category="body"] .gi-after {
+  background: linear-gradient(160deg, #0a1a14 0%, #0c2e24 60%, #051410 100%);
+}
+/* Tattoo */
+.gi-card[data-category="tattoo"] .gi-before {
+  background: linear-gradient(160deg, #0a0a1a 0%, #141428 60%, #060610 100%);
+}
+.gi-card[data-category="tattoo"] .gi-after {
+  background: linear-gradient(160deg, #0f0a1a 0%, #1c1030 60%, #080514 100%);
+}
+
+/* ── Gallery disclaimer ── */
+.gallery-disclaimer {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.7rem;
   color: var(--w40);
   font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* ── Reduced motion: disable hover lift ── */
+@media (prefers-reduced-motion: reduce) {
+  .gi-card { transition: none; }
+}
+
+/* ── Responsive grid tweaks ── */
+@media (max-width: 600px) {
+  .gi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .gi-handle { width: 28px; height: 28px; font-size: 0.6rem; }
 }
 
 /* ═══════════════════════════════════════════════════════

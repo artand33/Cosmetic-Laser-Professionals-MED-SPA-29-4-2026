@@ -208,37 +208,53 @@ if (testimonialsWrapper) {
 startAutoRotate();
 
 
-/* ─── GALLERY LIGHTBOX ────────────────────────────────── */
-const lightbox      = document.getElementById('lightbox');
-const lightboxLabel = document.getElementById('lightbox-label');
-const lightboxClose = document.getElementById('lightbox-close');
+/* ─── GALLERY FILTER + COMPARISON SLIDER ─────────────── */
+(function () {
+  const filterBtns = document.querySelectorAll('.gf-btn');
+  const cards      = document.querySelectorAll('.gi-card');
 
-function openLightbox(label) {
-  lightboxLabel.textContent = label;
-  lightbox.hidden = false;
-  document.body.style.overflow = 'hidden';
-  lightboxClose.focus();
-}
-function closeLightbox() {
-  lightbox.hidden = true;
-  document.body.style.overflow = '';
-}
+  /* ── Category filter ── */
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-document.querySelectorAll('.gallery-item').forEach(item => {
-  const open = () => openLightbox(item.dataset.label || '');
-  item.addEventListener('click', open);
-  item.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        const show = filter === 'all' || card.dataset.category === filter;
+        card.classList.toggle('hidden', !show);
+      });
+    });
   });
-});
 
-lightboxClose.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) closeLightbox();
-});
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
-});
+  /* ── Comparison slider ── */
+  function initCard(card) {
+    const afterEl = card.querySelector('.gi-after');
+    const lineEl  = card.querySelector('.gi-line');
+
+    // Start position: 50 %
+    let pct = 50;
+
+    function setPosition(x) {
+      const rect = card.getBoundingClientRect();
+      pct = Math.min(100, Math.max(0, ((x - rect.left) / rect.width) * 100));
+      // clip-path: inset(top right bottom left)
+      // We reveal "after" on the LEFT side: inset(0 (100-pct)% 0 0)
+      afterEl.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      lineEl.style.left      = pct + '%';
+    }
+
+    /* Mouse */
+    card.addEventListener('mousemove', e => setPosition(e.clientX), { passive: true });
+
+    /* Touch */
+    card.addEventListener('touchmove', e => {
+      setPosition(e.touches[0].clientX);
+    }, { passive: true });
+  }
+
+  cards.forEach(initCard);
+})();
 
 
 /* ─── FAQ ACCORDION ───────────────────────────────────── */
