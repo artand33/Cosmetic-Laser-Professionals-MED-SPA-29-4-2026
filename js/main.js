@@ -216,13 +216,16 @@ startAutoRotate();
   /* ── Category filter ── */
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
 
       const filter = btn.dataset.filter;
       cards.forEach(card => {
-        const show = filter === 'all' || card.dataset.category === filter;
-        card.classList.toggle('hidden', !show);
+        card.classList.toggle('hidden', card.dataset.category !== filter);
       });
     });
   });
