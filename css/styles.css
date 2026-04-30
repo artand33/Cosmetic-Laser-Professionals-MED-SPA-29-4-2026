@@ -511,7 +511,6 @@ p    { line-height: 1.7; }
   background: var(--teal);
   padding: 0;
   border-top: 1px solid rgba(201,169,110,0.15);
-  border-bottom: 1px solid rgba(201,169,110,0.15);
   /* NO overflow-x: auto — ever */
 }
 .trust-list {
@@ -552,14 +551,18 @@ p    { line-height: 1.7; }
 ═══════════════════════════════════════════════════════ */
 #promotions {
   padding: 1.5rem 0;
-  background: var(--navy-deep);
+  background: var(--teal);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .promo-card {
   position: relative;
-  background: linear-gradient(105deg, var(--teal) 0%, rgba(13,61,74,0.6) 60%, var(--navy-deep) 100%);
+  background: linear-gradient(105deg, rgba(6,8,16,0.75) 0%, rgba(6,8,16,0.60) 55%, rgba(13,61,74,0.45) 100%);
   border: 1px solid var(--gold-20);
   border-radius: var(--radius);
   overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .promo-card::before {
   content: '';
@@ -1495,7 +1498,7 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
     radial-gradient(ellipse 70% 40% at 50%  50%,  rgba(201,169,110,0.03) 0%, transparent 80%);
 }
 
-/* ── Promotions — teal orb top-left ── */
+/* ── Promotions — dark depth left, gold hint right (on teal bg) ── */
 #promotions { position: relative; }
 #promotions::before {
   content: '';
@@ -1504,8 +1507,8 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
   pointer-events: none;
   z-index: -1;
   background:
-    radial-gradient(ellipse 60% 80% at 0% 0%,   rgba(13,61,74,0.55)    0%, transparent 65%),
-    radial-gradient(ellipse 40% 50% at 100% 100%, rgba(201,169,110,0.06) 0%, transparent 60%);
+    radial-gradient(ellipse 50% 120% at 0%   50%, rgba(6,8,16,0.20)      0%, transparent 60%),
+    radial-gradient(ellipse 40% 120% at 100% 50%, rgba(201,169,110,0.07) 0%, transparent 60%);
 }
 
 /* ── Treatments — soft gold center glow ── */
