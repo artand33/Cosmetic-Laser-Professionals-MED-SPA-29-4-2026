@@ -1050,41 +1050,66 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
 .hours-table tr:last-child td { border-bottom: none; }
 
 /* ═══════════════════════════════════════════════════════
-   FOOTER CONTACT ITEMS
+   LOCATION CONTACT STRIP
 ═══════════════════════════════════════════════════════ */
-.footer-contact { display: flex; flex-direction: column; gap: 0.75rem; }
-.footer-contact-item {
+.location-contact-strip {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  background: var(--gold-10);
-  border: 1px solid var(--gold-20);
-  border-radius: var(--radius-sm);
-  transition: border-color 0.2s, transform 0.2s;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--gold-20);
+}
+.lcs-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
+  transition: color 0.2s;
+  flex: 1;
+  min-width: 0;
 }
-.footer-contact-item:hover {
-  border-color: var(--gold-30);
-  transform: translateX(3px);
-}
-.footer-contact-icon {
-  font-size: 1rem;
+.lcs-item:hover .lcs-value { color: var(--gold-light); }
+.lcs-item:hover .lcs-icon  { color: var(--gold-light); }
+.lcs-icon {
+  font-size: 1.1rem;
   color: var(--gold);
   flex-shrink: 0;
-  width: 1.4rem;
-  text-align: center;
+  transition: color 0.2s;
 }
-.footer-contact-item div { display: flex; flex-direction: column; gap: 0.1rem; }
-.footer-contact-item strong {
+.lcs-label {
   font-size: 0.65rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
-  line-height: 1.2;
+  color: var(--w40);
+  white-space: nowrap;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.2rem;
 }
-.footer-contact-item span { font-size: 0.82rem; color: var(--w70); }
+.lcs-value {
+  font-size: 0.88rem;
+  color: var(--w80, rgba(255,255,255,0.8));
+  font-weight: 400;
+  transition: color 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lcs-item > span:not(.lcs-icon) {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.lcs-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--gold-20);
+  flex-shrink: 0;
+}
 
 /* ═══════════════════════════════════════════════════════
    FAQ
@@ -1203,7 +1228,7 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--w08);
@@ -1219,6 +1244,12 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
   color: var(--w40);
   line-height: 1.65;
   max-width: 28ch;
+}
+.footer-brand address {
+  font-size: 0.78rem;
+  color: var(--w40);
+  line-height: 1.65;
+  font-style: normal;
 }
 .footer-social {
   display: flex;
@@ -1323,6 +1354,9 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
 
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .footer-brand { grid-column: 1 / -1; }
+  .location-contact-strip { gap: 0; }
+  .lcs-item { padding: 0.6rem 1rem; }
+  .lcs-value { font-size: 0.8rem; }
 }
 
 /* Mobile */
@@ -1343,6 +1377,9 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
 
   .footer-grid { grid-template-columns: 1fr; }
   .footer-brand { grid-column: auto; }
+  .location-contact-strip { flex-direction: column; align-items: flex-start; gap: 0; }
+  .lcs-item { width: 100%; padding: 0.85rem 0; }
+  .lcs-divider { width: 100%; height: 1px; }
 
   body { padding-bottom: 72px; }
 }
