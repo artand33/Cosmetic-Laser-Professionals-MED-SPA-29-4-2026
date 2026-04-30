@@ -545,53 +545,55 @@ p    { line-height: 1.7; }
 }
 
 /* ═══════════════════════════════════════════════════════
-   PROMOTIONS
+   PROMOTIONS — compact banner
 ═══════════════════════════════════════════════════════ */
 #promotions {
-  padding: var(--section-py) 0;
+  padding: 1.5rem 0;
   background: var(--navy-deep);
 }
 .promo-card {
   position: relative;
-  background: linear-gradient(135deg, var(--teal) 0%, rgba(13,61,74,0.5) 60%, var(--navy-deep) 100%);
+  background: linear-gradient(105deg, var(--teal) 0%, rgba(13,61,74,0.6) 60%, var(--navy-deep) 100%);
   border: 1px solid var(--gold-20);
-  border-radius: var(--radius-lg);
-  padding: clamp(2.5rem, 5vw, 4rem);
-  text-align: center;
+  border-radius: var(--radius);
   overflow: hidden;
 }
 .promo-card::before {
   content: '';
   position: absolute;
-  top: -60px; right: -60px;
-  width: 240px; height: 240px;
-  background: radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%);
+  top: -40px; right: -40px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(201,169,110,0.10) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
+}
+.promo-card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 2rem;
+  flex-wrap: wrap;
 }
 .promo-card-label {
   display: inline-block;
   background: var(--gold);
   color: var(--navy-deep);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   border-radius: 50px;
-  padding: 0.3rem 0.9rem;
-  margin-bottom: 1.5rem;
+  padding: 0.22rem 0.75rem;
+  margin-bottom: 0.4rem;
 }
-.promo-card h2 {
-  color: var(--white);
-  margin-bottom: 1rem;
+.promo-headline {
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  color: var(--w90);
+  font-weight: 500;
+  line-height: 1.4;
 }
-.promo-card p {
-  color: var(--w70);
-  margin-bottom: 2rem;
-  max-width: 44ch;
-  margin-left: auto;
-  margin-right: auto;
-}
+.promo-headline em { color: var(--gold); font-style: italic; }
 
 /* ═══════════════════════════════════════════════════════
    SOCIAL PROOF
@@ -1046,70 +1048,6 @@ blockquote footer strong { color: var(--white); font-size: 0.9rem; }
 }
 .hours-table td:first-child { font-weight: 500; color: var(--white); }
 .hours-table tr:last-child td { border-bottom: none; }
-
-/* ═══════════════════════════════════════════════════════
-   BOOKING
-═══════════════════════════════════════════════════════ */
-#booking {
-  padding: var(--section-py) 0;
-  background: var(--navy);
-  text-align: center;
-}
-.booking-inner {
-  max-width: 680px;
-  margin: 0 auto;
-}
-.booking-inner h2 { color: var(--white); margin-bottom: 1.25rem; }
-.booking-inner > p {
-  color: var(--w70);
-  font-size: 1.05rem;
-  margin-bottom: 2.5rem;
-}
-.booking-ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-.booking-consult {
-  font-size: 0.85rem;
-  color: var(--w40);
-  margin-bottom: 2.5rem;
-}
-.booking-consult a {
-  color: var(--gold);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.2s;
-}
-.booking-consult a:hover { color: var(--gold-light); }
-
-.financing-badges {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
-  background: var(--gold-10);
-  border: 1px solid var(--gold-20);
-  border-radius: 50px;
-  padding: 0.6rem 1.25rem;
-}
-.financing-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--w40);
-}
-.badge {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--gold-light);
-  background: var(--gold-20);
-  border-radius: 50px;
-  padding: 0.2rem 0.75rem;
-}
 
 /* ═══════════════════════════════════════════════════════
    CONTACT
